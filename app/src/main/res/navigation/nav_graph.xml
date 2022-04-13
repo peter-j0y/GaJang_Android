@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph.xml"
+    app:startDestination="@id/priceCompareFragment">
+
+    <fragment
+        android:id="@+id/myInfoFragment"
+        android:name="com.example.gajang.view.MyInfoFragment"
+        android:label="fragment_my_info"
+        tools:layout="@layout/fragment_my_info" />
+    <fragment
+        android:id="@+id/nearbyStoreFragment"
+        android:name="com.example.gajang.view.NearbyStoreFragment"
+        android:label="fragment_nearby_store"
+        tools:layout="@layout/fragment_nearby_store" />
+    <fragment
+        android:id="@+id/priceCompareFragment"
+        android:name="com.example.gajang.view.PriceCompareFragment"
+        android:label="fragment_price_compare"
+        tools:layout="@layout/fragment_price_compare" />
+</navigation>
