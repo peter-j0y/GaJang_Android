@@ -6,13 +6,46 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="com.example.gajang.view.LoginFragment">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="구글 로그인"
+
+    <ImageView
+        android:id="@+id/GaJangLogo"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/login_logo_image"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/AppCompatButton1"
+         />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/AppCompatButton1"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/button_shape_google"
+        android:drawableLeft="@drawable/button_image_property_google"
+        android:gravity="center"
+        android:text="Google 로그인"
+        android:textColor="@color/white"
+
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"/>
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/GaJangLogo" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:text="FACEBOOK 로그인"
+        android:background="@drawable/button_shape_facebook"
+        android:textColor="@color/white"
+        android:drawableLeft="@drawable/button_image_property_facebook"
+
+        android:id="@+id/AppCompatButton2"
+        android:layout_marginTop="15dp"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        app:layout_constraintTop_toBottomOf="@+id/AppCompatButton1"
+        app:layout_constraintLeft_toLeftOf="@+id/AppCompatButton1"
+        app:layout_constraintRight_toRightOf="@+id/AppCompatButton1"
+        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

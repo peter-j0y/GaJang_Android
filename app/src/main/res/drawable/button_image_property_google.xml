@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:drawable="@drawable/button_image_google"
+        android:width="28dp"
+        android:height="28dp"
+        android:left="20dp"
+        />
+</layer-list>
