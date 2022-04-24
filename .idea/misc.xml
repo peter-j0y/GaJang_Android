@@ -16,8 +16,18 @@
         <entry key="..\:/Users/Seungmin/GitProjects/GaJang_Android/app/src/main/res/layout/fragment_price_compare.xml" value="0.1" />
         <entry key="..\:/Users/Seungmin/GitProjects/GaJang_Android/app/src/main/res/layout/fragment_splash.xml" value="0.38697916666666665" />
         <entry key="..\:/Users/Seungmin/GitProjects/GaJang_Android/app/src/main/res/menu/bottom_nav_menu.xml" value="0.20416666666666666" />
+        <entry key="app/src/main/res/drawable/btn_facebook.xml" value="0.281" />
+        <entry key="app/src/main/res/drawable/btn_fackbook.xml" value="0.2185" />
+        <entry key="app/src/main/res/drawable/btn_google.xml" value="0.281" />
+        <entry key="app/src/main/res/drawable/btn_shape.xml" value="0.281" />
+        <entry key="app/src/main/res/drawable/facebook_btn.xml" value="0.281" />
+        <entry key="app/src/main/res/drawable/facebook_icon.xml" value="0.281" />
+        <entry key="app/src/main/res/drawable/facebook_shape.xml" value="0.281" />
+        <entry key="app/src/main/res/drawable/icon_facebook.xml" value="0.281" />
+        <entry key="app/src/main/res/drawable/icon_google.xml" value="0.281" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.4279891304347826" />
         <entry key="app/src/main/res/layout/fragment_login.xml" value="0.4279891304347826" />
+        <entry key="app/src/main/res/layout/fragment_my_info.xml" value="0.4336372847011145" />
       </map>
     </option>
   </component>
