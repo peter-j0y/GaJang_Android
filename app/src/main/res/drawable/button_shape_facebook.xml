@@ -2,7 +2,7 @@
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
     <item   android:state_enabled="true">
         <shape>
-            <solid android:color="@color/facebookColor">
+            <solid android:color="@color/facebook_color">
 
             </solid>
 
