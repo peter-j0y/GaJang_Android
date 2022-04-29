@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "14446595289",
+    "project_id": "gajang-android",
+    "storage_bucket": "gajang-android.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:14446595289:android:6008816778c56df9c6c2c8",
+        "android_client_info": {
+          "package_name": "com.example.gajang"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "14446595289-1blq5ig0o87i6mfcmi9el6p2acu7pkj8.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.gajang",
+            "certificate_hash": "497910e3f5063321272fbe99384cf526f513774c"
+          }
+        },
+        {
+          "client_id": "14446595289-ik3iclc8tldjrs5jt9v2p7lpqgn73pf4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAwPl5wu7TzeEh3jM9WxngXf7sCUs9pSd4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "14446595289-ik3iclc8tldjrs5jt9v2p7lpqgn73pf4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

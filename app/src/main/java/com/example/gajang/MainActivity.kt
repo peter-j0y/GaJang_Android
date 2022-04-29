@@ -2,6 +2,7 @@ package com.example.gajang
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.ui.NavigationUI
@@ -26,5 +27,15 @@ class MainActivity : AppCompatActivity() {
 
         // 바텀 네비게이션 뷰와 네비게이션을 묶어준다
         NavigationUI.setupWithNavController(binding.bottomNav, navController)
+
+        // 바텀 네비게이션 뷰 출력하는 곳과 출력하지 않는 곳
+        navController.addOnDestinationChangedListener{_, destination, _ ->
+            if(destination.id == R.id.splashFragment || destination.id == R.id.loginFragment){
+                binding.bottomNav.visibility = View.GONE
+            }
+            else{
+                binding.bottomNav.visibility = View.VISIBLE
+            }
+        }
     }
 }
