@@ -3,13 +3,17 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph.xml"
-    app:startDestination="@id/priceCompareFragment">
+    app:startDestination="@id/splashFragment">
 
     <fragment
         android:id="@+id/myInfoFragment"
         android:name="com.example.gajang.view.MyInfoFragment"
         android:label="fragment_my_info"
-        tools:layout="@layout/fragment_my_info" />
+        tools:layout="@layout/fragment_my_info" >
+        <action
+            android:id="@+id/action_myInfoFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
     <fragment
         android:id="@+id/nearbyStoreFragment"
         android:name="com.example.gajang.view.NearbyStoreFragment"
@@ -20,4 +24,29 @@
         android:name="com.example.gajang.view.PriceCompareFragment"
         android:label="fragment_price_compare"
         tools:layout="@layout/fragment_price_compare" />
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.gajang.view.LoginFragment"
+        android:label="LoginFragment"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_loginFragment_to_priceCompareFragment"
+            app:destination="@id/priceCompareFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.example.gajang.view.SplashFragment"
+        android:label="fragment_splash"
+        tools:layout="@layout/fragment_splash" >
+        <action
+            android:id="@+id/action_splashFragment_to_priceCompareFragment"
+            app:destination="@id/priceCompareFragment"
+            app:popUpTo="@id/splashFragment"
+            app:popUpToInclusive="true"/>
+        <action
+            android:id="@+id/action_splashFragment_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:popUpTo="@id/splashFragment"
+            app:popUpToInclusive="true"/>
+    </fragment>
 </navigation>
