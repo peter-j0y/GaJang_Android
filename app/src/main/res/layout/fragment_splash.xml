@@ -20,7 +20,7 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:text="장보러 가장"
-        android:textSize="30dp"
+        android:textSize="35sp"
         android:layout_marginTop="20dp"
         android:textStyle="bold"
         android:textColor="@color/black"
