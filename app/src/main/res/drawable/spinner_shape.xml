@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <layer-list>
+            <item>
+                <shape android:shape="rectangle">
+                    <solid android:color="@color/spinner_btn_color" />
+                    <corners android:radius="13dp" />
+                    <padding android:right="15dp" />
+
+
+                </shape>
+            </item>
+            <item
+                android:drawable="@drawable/downward_icon"
+                android:gravity="center|end"
+                android:width="15dp"
+                android:height="15dp"
+                />
+        </layer-list>
+    </item>
+</selector>

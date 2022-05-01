@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:id="@+id/gajang_logo_image_view"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:src="@drawable/login_logo"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginBottom="100dp"
+         />
+    <TextView
+        android:id="@+id/spinner_living_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="거주지를 선택해주세요"
+        android:textSize="15sp"
+        app:layout_constraintTop_toBottomOf="@+id/gajang_logo_image_view"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/spinner_living_list"
+        app:layout_constraintBottom_toTopOf="@+id/spinner_living_list"
+        android:layout_marginTop="40dp"
+        android:textColor="@color/black"/>
+
+    <Spinner
+        android:id="@+id/spinner_living_list"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:spinnerMode="dropdown"
+        app:layout_constraintTop_toTopOf="@+id/spinner_living_text"
+        app:layout_constraintLeft_toRightOf="@+id/spinner_living_text"
+        app:layout_constraintBottom_toBottomOf="@+id/spinner_living_text"
+        app:layout_constraintRight_toRightOf="parent"
+        android:entries="@array/living_array"
+        android:background="@drawable/spinner_shape"
+        />
+
+    <Button
+        android:id="@+id/spinner_select_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:text="선택"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinner_living_list"
+        android:background="@color/google_color"
+        android:layout_marginTop="10dp"
+        />
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

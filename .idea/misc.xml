@@ -27,12 +27,17 @@
         <entry key="app/src/main/res/drawable/facebook_icon.xml" value="0.281" />
         <entry key="app/src/main/res/drawable/facebook_shape.xml" value="0.281" />
         <entry key="app/src/main/res/drawable/ic_chart.xml" value="0.4245" />
+        <entry key="app/src/main/res/drawable/ic_my_info.xml" value="0.544" />
         <entry key="app/src/main/res/drawable/icon_facebook.xml" value="0.281" />
         <entry key="app/src/main/res/drawable/icon_google.xml" value="0.281" />
         <entry key="app/src/main/res/drawable/login_logo.xml" value="0.4245" />
+        <entry key="app/src/main/res/drawable/spinner_shape.xml" value="0.548" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.4279891304347826" />
         <entry key="app/src/main/res/layout/fragment_login.xml" value="0.4279891304347826" />
         <entry key="app/src/main/res/layout/fragment_my_info.xml" value="0.4336372847011145" />
+        <entry key="app/src/main/res/layout/fragment_nearby_store.xml" value="0.8916666666666667" />
+        <entry key="app/src/main/res/layout/fragment_price_compare.xml" value="0.8916666666666667" />
+        <entry key="app/src/main/res/layout/fragment_spinner.xml" value="0.8916666666666667" />
         <entry key="app/src/main/res/layout/fragment_splash.xml" value="0.5453125" />
         <entry key="app/src/main/res/menu/bottom_nav_menu.xml" value="0.5453125" />
       </map>

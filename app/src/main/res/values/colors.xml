@@ -9,4 +9,5 @@
     <color name="white">#FFFFFFFF</color>
     <color name="facebook_color">#3B5998</color>
     <color name="google_color">#F7B529</color>
+    <color name="spinner_btn_color">#FFC7C7</color>
 </resources>
