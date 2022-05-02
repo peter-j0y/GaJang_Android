@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="item_array">
+        <item>고등어</item>
+        <item>오징어</item>
+        <item>명태</item>
+        <item>조기</item>
+        <item>달걀</item>
+        <item>닭고기</item>
+        <item>돼지고기</item>
+        <item>쇠고기</item>
+        <item>애호박</item>
+        <item>오이</item>
+        <item>상추</item>
+        <item>양파</item>
+        <item>무</item>
+        <item>배추</item>
+        <item>배</item>
+        <item>사과</item>
+
+    </string-array>
+
+    <integer-array name = "item_image">
+        <item>@drawable/button_image_google</item>
+
+    </integer-array>
+
+</resources>
