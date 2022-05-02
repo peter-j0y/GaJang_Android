@@ -17,6 +17,7 @@
         <entry key="..\:/Users/Seungmin/GitProjects/GaJang_Android/app/src/main/res/layout/fragment_splash.xml" value="0.38697916666666665" />
         <entry key="..\:/Users/Seungmin/GitProjects/GaJang_Android/app/src/main/res/menu/bottom_nav_menu.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/leems/AndroidStudioProjects/GaJang_Android/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.34" />
+        <entry key="..\:/Users/leems/AndroidStudioProjects/GaJang_Android/app/src/main/res/drawable/button_image_property_facebook.xml" value="0.37" />
         <entry key="..\:/Users/leems/AndroidStudioProjects/GaJang_Android/app/src/main/res/drawable/button_image_property_google.xml" value="0.34" />
         <entry key="..\:/Users/leems/AndroidStudioProjects/GaJang_Android/app/src/main/res/drawable/button_shape_facebook.xml" value="0.34" />
         <entry key="..\:/Users/leems/AndroidStudioProjects/GaJang_Android/app/src/main/res/drawable/button_shape_google.xml" value="0.34" />
@@ -25,12 +26,17 @@
         <entry key="..\:/Users/leems/AndroidStudioProjects/GaJang_Android/app/src/main/res/drawable/ic_location.xml" value="0.34" />
         <entry key="..\:/Users/leems/AndroidStudioProjects/GaJang_Android/app/src/main/res/drawable/ic_my_info.xml" value="0.34" />
         <entry key="..\:/Users/leems/AndroidStudioProjects/GaJang_Android/app/src/main/res/drawable/login_logo.xml" value="0.34" />
+        <entry key="..\:/Users/leems/AndroidStudioProjects/GaJang_Android/app/src/main/res/drawable/spinner_shape.xml" value="0.341" />
         <entry key="..\:/Users/leems/AndroidStudioProjects/GaJang_Android/app/src/main/res/layout/activity_main.xml" value="0.515625" />
         <entry key="..\:/Users/leems/AndroidStudioProjects/GaJang_Android/app/src/main/res/layout/fragment_login.xml" value="0.515625" />
         <entry key="..\:/Users/leems/AndroidStudioProjects/GaJang_Android/app/src/main/res/layout/fragment_my_info.xml" value="0.515625" />
-        <entry key="..\:/Users/leems/AndroidStudioProjects/GaJang_Android/app/src/main/res/layout/fragment_nearby_store.xml" value="0.515625" />
-        <entry key="..\:/Users/leems/AndroidStudioProjects/GaJang_Android/app/src/main/res/layout/fragment_price_compare.xml" value="0.515625" />
+        <entry key="..\:/Users/leems/AndroidStudioProjects/GaJang_Android/app/src/main/res/layout/fragment_nearby_store.xml" value="0.25" />
+        <entry key="..\:/Users/leems/AndroidStudioProjects/GaJang_Android/app/src/main/res/layout/fragment_price_compare.xml" value="0.25" />
+        <entry key="..\:/Users/leems/AndroidStudioProjects/GaJang_Android/app/src/main/res/layout/fragment_spinner.xml" value="0.35597826086956524" />
         <entry key="..\:/Users/leems/AndroidStudioProjects/GaJang_Android/app/src/main/res/layout/fragment_splash.xml" value="0.515625" />
+        <entry key="..\:/Users/leems/AndroidStudioProjects/GaJang_Android/app/src/main/res/layout/nearby_itemview.xml" value="0.35597826086956524" />
+        <entry key="..\:/Users/leems/AndroidStudioProjects/GaJang_Android/app/src/main/res/layout/price_compare_itemview.xml" value="0.35597826086956524" />
+        <entry key="..\:/Users/leems/AndroidStudioProjects/GaJang_Android/app/src/main/res/menu/bottom_nav_menu.xml" value="0.5197916666666667" />
         <entry key="app/src/main/res/drawable/btn_facebook.xml" value="0.281" />
         <entry key="app/src/main/res/drawable/btn_fackbook.xml" value="0.2185" />
         <entry key="app/src/main/res/drawable/btn_google.xml" value="0.281" />
@@ -42,17 +48,12 @@
         <entry key="app/src/main/res/drawable/facebook_icon.xml" value="0.281" />
         <entry key="app/src/main/res/drawable/facebook_shape.xml" value="0.281" />
         <entry key="app/src/main/res/drawable/ic_chart.xml" value="0.4245" />
-        <entry key="app/src/main/res/drawable/ic_my_info.xml" value="0.544" />
         <entry key="app/src/main/res/drawable/icon_facebook.xml" value="0.281" />
         <entry key="app/src/main/res/drawable/icon_google.xml" value="0.281" />
         <entry key="app/src/main/res/drawable/login_logo.xml" value="0.4245" />
-        <entry key="app/src/main/res/drawable/spinner_shape.xml" value="0.548" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.4279891304347826" />
         <entry key="app/src/main/res/layout/fragment_login.xml" value="0.4279891304347826" />
         <entry key="app/src/main/res/layout/fragment_my_info.xml" value="0.4336372847011145" />
-        <entry key="app/src/main/res/layout/fragment_nearby_store.xml" value="0.8916666666666667" />
-        <entry key="app/src/main/res/layout/fragment_price_compare.xml" value="0.8916666666666667" />
-        <entry key="app/src/main/res/layout/fragment_spinner.xml" value="0.8916666666666667" />
         <entry key="app/src/main/res/layout/fragment_splash.xml" value="0.5453125" />
         <entry key="app/src/main/res/menu/bottom_nav_menu.xml" value="0.5453125" />
       </map>

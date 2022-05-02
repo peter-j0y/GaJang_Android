@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    android:layout_marginBottom="5dp"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/com_facebook_blue"
+        android:orientation="horizontal"
+        android:padding="5dp">
+
+        <ImageView
+            android:id="@+id/price_compare_item_view_image"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:background="@drawable/fish"/>
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="2"
+            android:rowCount="2"
+            android:orientation="horizontal"
+            android:layout_gravity="fill|center_horizontal">
+
+            <TextView
+                android:id="@+id/price_compare_item_price"
+                android:layout_height="wrap_content"
+                android:text="1000원"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textSize="17dp"
+                android:layout_columnWeight="1"
+                />
+            <TextView
+                android:id="@+id/price_compare_item_market"
+                android:text="롯데마트"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textSize="17dp"
+                android:layout_columnWeight="1"/>
+            <TextView
+                android:id="@+id/price_compare_item_origin"
+                android:text="국내산"
+                android:gravity="center"
+                android:textSize="14dp"
+                android:layout_columnWeight="1"/>
+            <TextView
+                android:id="@+id/price_compare_item_area"
+                android:text="송파구"
+                android:gravity="center"
+                android:textSize="14dp"
+                android:layout_columnWeight="1" />
+
+        </GridLayout>
+    </LinearLayout>
+</LinearLayout>
