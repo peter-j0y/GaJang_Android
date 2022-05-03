@@ -34,7 +34,7 @@
                 android:text="1000원"
                 android:gravity="center"
                 android:textStyle="bold"
-                android:textSize="17dp"
+                android:textSize="17sp"
                 android:layout_columnWeight="1"
                 />
             <TextView
@@ -42,19 +42,19 @@
                 android:text="롯데마트"
                 android:gravity="center"
                 android:textStyle="bold"
-                android:textSize="17dp"
+                android:textSize="17sp"
                 android:layout_columnWeight="1"/>
             <TextView
                 android:id="@+id/price_compare_item_origin"
                 android:text="국내산"
                 android:gravity="center"
-                android:textSize="14dp"
+                android:textSize="14sp"
                 android:layout_columnWeight="1"/>
             <TextView
                 android:id="@+id/price_compare_item_area"
                 android:text="송파구"
                 android:gravity="center"
-                android:textSize="14dp"
+                android:textSize="14sp"
                 android:layout_columnWeight="1" />
 
         </GridLayout>
