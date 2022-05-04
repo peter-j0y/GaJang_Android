@@ -61,6 +61,7 @@
         <entry key="app/src/main/res/layout/fragment_spinner.xml" value="0.33" />
         <entry key="app/src/main/res/layout/fragment_splash.xml" value="0.5453125" />
         <entry key="app/src/main/res/layout/nearby_itemview.xml" value="0.5776041666666667" />
+        <entry key="app/src/main/res/layout/nearby_marketview.xml" value="0.5458333333333333" />
         <entry key="app/src/main/res/layout/price_compare_itemview.xml" value="0.7369791666666666" />
         <entry key="app/src/main/res/menu/bottom_nav_menu.xml" value="0.5453125" />
       </map>
