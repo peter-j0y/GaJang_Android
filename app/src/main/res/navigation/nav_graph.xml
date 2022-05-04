@@ -5,8 +5,6 @@
     android:id="@+id/nav_graph.xml"
     app:startDestination="@id/splashFragment">
 
-
-
     <fragment
         android:id="@+id/myInfoFragment"
         android:name="com.example.gajang.view.MyInfoFragment"
