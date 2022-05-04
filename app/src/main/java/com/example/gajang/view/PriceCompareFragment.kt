@@ -75,7 +75,7 @@ class PriceCompareFragment : BaseFragment<FragmentPriceCompareBinding>(R.layout.
                     priceCompareMarketImage.setImageResource(com.example.gajang.R.drawable.pear)
                 }
                 else{
-//                    apple
+//                    Apple
                     priceCompareMarketImage.setImageResource(com.example.gajang.R.drawable.apple)
                 }
 
