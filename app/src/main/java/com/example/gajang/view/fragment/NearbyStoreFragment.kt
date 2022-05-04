@@ -1,16 +1,12 @@
-package com.example.gajang.view
+package com.example.gajang.view.fragment
 
-import android.system.Os.bind
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
 import android.widget.AdapterView
-import android.widget.Toast
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 import com.example.gajang.R
 import com.example.gajang.base.BaseFragment
 import com.example.gajang.databinding.FragmentNearbyStoreBinding
+import com.example.gajang.view.adapter.NearbyAdapter
+import com.example.gajang.view.NearbyData
 import android.widget.ArrayAdapter as ArrayAdapter
 
 class NearbyStoreFragment : BaseFragment<FragmentNearbyStoreBinding>(R.layout.fragment_nearby_store) {
