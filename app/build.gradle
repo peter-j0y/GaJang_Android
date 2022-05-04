@@ -64,4 +64,14 @@ dependencies {
     implementation 'com.google.android.gms:play-services-auth:20.2.0'
     implementation 'com.facebook.android:facebook-android-sdk:12.3.0'
     implementation 'com.facebook.android:facebook-login:13.0.0'
+
+    // Retrofit2
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation 'com.squareup.retrofit2:retrofit-mock:2.9.0'
+    implementation 'com.google.code.gson:gson:2.9.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+
+    // HTTP logging
+    implementation('com.squareup.okhttp3:logging-interceptor:5.0.0-alpha.6')
+
 }

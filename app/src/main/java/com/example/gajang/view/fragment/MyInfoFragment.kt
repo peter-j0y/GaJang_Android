@@ -1,4 +1,4 @@
-package com.example.gajang.view
+package com.example.gajang.view.fragment
 
 import android.content.ContentValues.TAG
 import android.util.Log

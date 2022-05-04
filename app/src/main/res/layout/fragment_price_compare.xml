@@ -2,7 +2,7 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context="com.example.gajang.view.PriceCompareFragment"
+    tools:context="com.example.gajang.view.fragment.PriceCompareFragment"
     android:id="@+id/priceCompareFragment">
 
     <data>
@@ -50,15 +50,16 @@
             />
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@+id/price_compare_market_image">
+            android:layout_height="0dp"
+            app:layout_constraintTop_toBottomOf="@+id/price_compare_market_image"
+            app:layout_constraintBottom_toBottomOf="parent">
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/price_compare_rcv"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-                tools:listitem="@layout/price_compare_itemview" />
+                tools:listitem="@layout/price_compare_item_view" />
         </LinearLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
