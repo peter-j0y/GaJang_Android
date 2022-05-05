@@ -10,7 +10,6 @@ class NearbyAdapter: RecyclerView.Adapter<NearbyAdapter.MyViewHolder>() {
     var datalist = mutableListOf<NearbyData>()//리사이클러뷰에서 사용할 데이터 미리 정의 -> 나중에 MainActivity등에서 datalist에 실제 데이터 추가
 
     inner class MyViewHolder(private val binding: NearbyItemviewBinding): RecyclerView.ViewHolder(binding.root) {
-
         fun bind(myData:NearbyData){
             //binding.dogPhotoImg.=dogData.dog_img
             binding.nearbyItemName.text=myData.name
@@ -23,6 +22,7 @@ class NearbyAdapter: RecyclerView.Adapter<NearbyAdapter.MyViewHolder>() {
     //만들어진 뷰홀더 없을때 뷰홀더(레이아웃) 생성하는 함수
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
         val binding=NearbyItemviewBinding.inflate(LayoutInflater.from(parent.context),parent,false)
+
         return MyViewHolder(binding)
     }
 
@@ -33,6 +33,4 @@ class NearbyAdapter: RecyclerView.Adapter<NearbyAdapter.MyViewHolder>() {
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
         holder.bind(datalist[position])
     }
-
-
 }

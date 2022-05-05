@@ -13,7 +13,25 @@
         <action
             android:id="@+id/action_myInfoFragment_to_loginFragment"
             app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_myInfoFragment_to_spinnerFragment"
+            app:destination="@id/selectLivingFragment" />
+        <action
+            android:id="@+id/action_myInfoFragment_to_privacyFragment"
+            app:destination="@id/privacyFragment" />
     </fragment>
+
+    <fragment
+        android:id="@+id/selectLivingFragment"
+        android:name="com.example.gajang.view.SelectLivingFragment"
+        android:label="fragment_spinner"
+        tools:layout="@layout/fragment_select_living" />
+    <fragment
+        android:id="@+id/privacyFragment"
+        android:name="com.example.gajang.view.PrivacyFragment"
+        android:label="fragment_spinner"
+        tools:layout="@layout/fragment_privacy" />
+
     <fragment
         android:id="@+id/nearbyStoreFragment"
         android:name="com.example.gajang.view.NearbyStoreFragment"

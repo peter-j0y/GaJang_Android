@@ -3,13 +3,11 @@ package com.example.gajang.view
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.example.gajang.databinding.NearbyItemviewBinding
 import com.example.gajang.databinding.PriceCompareItemviewBinding
 
+
 class PriceCompareAdapter: RecyclerView.Adapter<PriceCompareAdapter.MyViewHolder>() {
-
     var datalist = mutableListOf<PriceCompareData>()//리사이클러뷰에서 사용할 데이터 미리 정의 -> 나중에 MainActivity등에서 datalist에 실제 데이터 추가
-
     inner class MyViewHolder(private val binding: PriceCompareItemviewBinding): RecyclerView.ViewHolder(binding.root) {
         fun bind(myData:PriceCompareData){
             //binding.dogPhotoImg.=dogData.dog_img
@@ -17,7 +15,10 @@ class PriceCompareAdapter: RecyclerView.Adapter<PriceCompareAdapter.MyViewHolder
             binding.priceCompareItemOrigin.text = myData.origin
             binding.priceCompareItemArea.text = myData.living
             binding.priceCompareItemMarket.text = myData.market
+
+
         }
+
     }
 
 
