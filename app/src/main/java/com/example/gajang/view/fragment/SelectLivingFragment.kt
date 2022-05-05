@@ -1,4 +1,4 @@
-package com.example.gajang.view
+package com.example.gajang.view.fragment
 
 import android.os.Bundle
 import android.view.LayoutInflater
