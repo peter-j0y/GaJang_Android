@@ -2,13 +2,12 @@ package com.example.gajang.view.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.lifecycle.LiveData
 import androidx.recyclerview.widget.RecyclerView
 import com.example.gajang.data.model.ResponseNecessariesData
 import com.example.gajang.databinding.PriceCompareItemViewBinding
 
-class PriceCompareAdapter: RecyclerView.Adapter<PriceCompareAdapter.MyViewHolder>() {
-
-    var dataList = mutableListOf<ResponseNecessariesData.Row>()//리사이클러뷰에서 사용할 데이터 미리 정의 -> 나중에 MainActivity등에서 datalist에 실제 데이터 추가
+class PriceCompareAdapter(var dataList: ArrayList<ResponseNecessariesData.Row>): RecyclerView.Adapter<PriceCompareAdapter.MyViewHolder>() {
 
     inner class MyViewHolder(private val binding: PriceCompareItemViewBinding): RecyclerView.ViewHolder(binding.root) {
         fun bind(myData: ResponseNecessariesData.Row){
