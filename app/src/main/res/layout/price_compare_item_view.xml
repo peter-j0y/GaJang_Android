@@ -9,24 +9,25 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="80dp"
         android:layout_margin="5dp"
-        android:layout_marginBottom="5dp"
         android:orientation="vertical">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/com_facebook_blue"
+            android:layout_height="match_parent"
             android:orientation="horizontal"
-            android:padding="5dp">
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/round_border"
+            android:elevation="5dp"
+            >
 
             <ImageView
                 android:id="@+id/price_compare_item_view_image"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
+                android:layout_width="80dp"
+                android:layout_height="match_parent"
                 android:layout_gravity="center"
-                android:background="@drawable/fish" />
+                android:background="@drawable/lottemart" />
 
             <GridLayout
                 android:layout_width="match_parent"
@@ -38,23 +39,27 @@
 
                 <TextView
                     android:id="@+id/price_compare_item_price"
-                    android:layout_height="wrap_content"
+                    android:layout_height="37.5dp"
                     android:text="@{priceCompareItemData.a_PRICE}"
                     android:gravity="center"
                     android:textStyle="bold"
                     android:textSize="17sp"
+                    android:background="@drawable/border_down"
                     android:layout_columnWeight="1" />
 
                 <TextView
                     android:id="@+id/price_compare_item_market"
+                    android:layout_height="37.5dp"
                     android:text="@{priceCompareItemData.m_NAME}"
                     android:gravity="center"
                     android:textStyle="bold"
                     android:textSize="17sp"
+                    android:background="@drawable/border_down_left"
                     android:layout_columnWeight="1" />
 
                 <TextView
                     android:id="@+id/price_compare_item_origin"
+                    android:layout_height="37.5dp"
                     android:text="@{priceCompareItemData.ADD_COL}"
                     android:gravity="center"
                     android:textSize="14sp"
@@ -62,9 +67,11 @@
 
                 <TextView
                     android:id="@+id/price_compare_item_area"
+                    android:layout_height="37.5dp"
                     android:text="@{priceCompareItemData.m_GU_NAME}"
                     android:gravity="center"
                     android:textSize="14sp"
+                    android:background="@drawable/border_left"
                     android:layout_columnWeight="1" />
 
             </GridLayout>
