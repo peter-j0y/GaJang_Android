@@ -30,7 +30,7 @@ class MainActivity : AppCompatActivity() {
 
         // 바텀 네비게이션 뷰 출력하는 곳과 출력하지 않는 곳
         navController.addOnDestinationChangedListener{_, destination, _ ->
-            if(destination.id == R.id.splashFragment || destination.id == R.id.loginFragment){
+            if(destination.id == R.id.splashFragment || destination.id == R.id.loginFragment || destination.id == R.id.selectLivingFragment){
                 binding.bottomNav.visibility = View.GONE
             }
             else{

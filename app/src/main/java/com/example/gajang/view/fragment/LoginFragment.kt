@@ -77,7 +77,7 @@ class LoginFragment : BaseFragment<FragmentLoginBinding>(R.layout.fragment_login
                         ) { task ->
                                 if (task.isSuccessful) {
                                         // 인증에 성공하면 홈화면으로 이동
-                                        findNavController().navigate(R.id.action_loginFragment_to_priceCompareFragment)
+                                        findNavController().navigate(R.id.action_loginFragment_to_selectLivingFragment)
                                 }
                         }
         }
@@ -114,7 +114,7 @@ class LoginFragment : BaseFragment<FragmentLoginBinding>(R.layout.fragment_login
                     .addOnCompleteListener{ task ->
                             if(task.isSuccessful){ // 정상적으로 email, password 가 전달된 경우
                                     // 로그인 처리
-                                    findNavController().navigate(R.id.action_loginFragment_to_priceCompareFragment)
+                                    findNavController().navigate(R.id.action_loginFragment_to_selectLivingFragment)
                             } else {
                                     // 예외 발생 시 메시지 출력
                                     Toast.makeText(requireContext(), task.exception?.message, Toast.LENGTH_LONG).show()

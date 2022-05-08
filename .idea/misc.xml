@@ -13,8 +13,15 @@
         <entry key="..\:/Users/Seungmin/GitProjects/GaJang_Android/app/src/main/res/layout/fragment_login.xml" value="0.38697916666666665" />
         <entry key="..\:/Users/Seungmin/GitProjects/GaJang_Android/app/src/main/res/layout/fragment_my_info.xml" value="0.38697916666666665" />
         <entry key="..\:/Users/Seungmin/GitProjects/GaJang_Android/app/src/main/res/layout/fragment_nearby_store.xml" value="0.1" />
+        <entry key="..\:/Users/Seungmin/GitProjects/GaJang_Android/app/src/main/res/layout/fragment_nearby_store_detail.xml" value="0.14010416666666667" />
+        <entry key="..\:/Users/Seungmin/GitProjects/GaJang_Android/app/src/main/res/layout/fragment_nearyby_store_detail_show.xml" value="0.1" />
         <entry key="..\:/Users/Seungmin/GitProjects/GaJang_Android/app/src/main/res/layout/fragment_price_compare.xml" value="0.1" />
+        <entry key="..\:/Users/Seungmin/GitProjects/GaJang_Android/app/src/main/res/layout/fragment_privacy.xml" value="0.10625" />
+        <entry key="..\:/Users/Seungmin/GitProjects/GaJang_Android/app/src/main/res/layout/fragment_select_living.xml" value="0.22" />
         <entry key="..\:/Users/Seungmin/GitProjects/GaJang_Android/app/src/main/res/layout/fragment_splash.xml" value="0.38697916666666665" />
+        <entry key="..\:/Users/Seungmin/GitProjects/GaJang_Android/app/src/main/res/layout/nearby_item_view.xml" value="0.2" />
+        <entry key="..\:/Users/Seungmin/GitProjects/GaJang_Android/app/src/main/res/layout/nearby_market_view.xml" value="0.14010416666666667" />
+        <entry key="..\:/Users/Seungmin/GitProjects/GaJang_Android/app/src/main/res/layout/price_compare_item_view.xml" value="0.10625" />
         <entry key="..\:/Users/Seungmin/GitProjects/GaJang_Android/app/src/main/res/menu/bottom_nav_menu.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/leems/AndroidStudioProjects/GaJang_Android/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.34" />
         <entry key="..\:/Users/leems/AndroidStudioProjects/GaJang_Android/app/src/main/res/drawable/border_donw_left.xml" value="0.2045" />

@@ -48,7 +48,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-                tools:listitem="@layout/nearby_market_view" />
+                tools:listitem="@layout/nearby_market_item_view" />
 
         </LinearLayout>
 

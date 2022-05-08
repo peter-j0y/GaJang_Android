@@ -32,9 +32,9 @@ class MyInfoFragment : BaseFragment<FragmentMyInfoBinding>(R.layout.fragment_my_
             findNavController().navigate(R.id.action_myInfoFragment_to_loginFragment)
         }
         // 거주지 변경 버튼 눌렀을 때 거주지 변경창으로 이동
-        binding.changeLocationButton.setOnClickListener{
-            findNavController().navigate(R.id.action_myInfoFragment_to_spinnerFragment)
-        }
+//        binding.changeLocationButton.setOnClickListener{
+//            findNavController().navigate(R.id.action_myInfoFragment_to_spinnerFragment)
+//        }
         // 개인정보처리방침 버튼 눌렀을 때 개인정보처리 화면으로 이동
         binding.personalPrivacyButton.setOnClickListener{
             findNavController().navigate(R.id.action_myInfoFragment_to_privacyFragment)
