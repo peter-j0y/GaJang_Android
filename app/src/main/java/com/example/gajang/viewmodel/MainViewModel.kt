@@ -14,13 +14,23 @@ import retrofit2.Response
 
 class MainViewModel : ViewModel() {
 
-    // 선택한 거주지를 저장하는 변수
-    private val _currentLivingArea = MutableLiveData<String>("하남")
-    val livingArea: LiveData<String> = _currentLivingArea
+    // 선택한 거주지 인덱스를 저장하는 변수
+    private val _currentLivingArea = MutableLiveData<Int>()
+    val livingArea: LiveData<Int> = _currentLivingArea
 
-    // 현재 선택한 생필품을 저장하는 변수
-    private val _currentSelectedNecessary = MutableLiveData<String>()
-    val selectedNecessary: LiveData<String> = _currentSelectedNecessary
+    // 거주지 인덱스를 업데이트하는 함수
+    fun updateLivingArea(input : Int){
+        _currentLivingArea.value = input
+    }
+
+    // 현재 선택한 생필품 인덱스를 저장하는 변수
+    private val _currentSelectedNecessary = MutableLiveData<Int>()
+    val selectedNecessary: LiveData<Int> = _currentSelectedNecessary
+
+    // 선택한 생필품 인덱스를 업데이트하는 함수
+    fun updateNecessary(input : Int){
+        _currentSelectedNecessary.value = input
+    }
 
     // 서울시 공공데이터로부터 받은 데이터를 저장하는 변수
     private var _currentRemoteData = MutableLiveData<ArrayList<ResponseNecessariesData.Row>>()

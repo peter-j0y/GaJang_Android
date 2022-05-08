@@ -6,8 +6,8 @@
 
     <ImageView
         android:id="@+id/gajang_logo_image_view"
-        android:layout_width="match_parent"
-        android:layout_height="200dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:src="@drawable/login_logo"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -52,9 +52,4 @@
         android:background="@color/google_color"
         android:layout_marginTop="10dp"
         />
-
-
-
-
-
 </androidx.constraintlayout.widget.ConstraintLayout>
