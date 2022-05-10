@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.gajang">
+    package="com.minrd.gajang">
 
     <uses-permission android:name="android.permission.INTERNET"/>
 
     <application
-        android:name="com.example.gajang.util.GajangApplication"
+        android:name="com.minrd.gajang.util.GajangApplication"
         android:usesCleartextTraffic="true"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -14,7 +14,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.GaJang_Android">
         <activity
-            android:name=".MainActivity"
+            android:name="com.minrd.gajang.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

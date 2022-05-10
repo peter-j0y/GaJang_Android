@@ -9,7 +9,7 @@ android {
     compileSdk 31
 
     defaultConfig {
-        applicationId "com.example.gajang"
+        applicationId "com.minrd.gajang"
         minSdk 23
         targetSdk 31
         versionCode 1
