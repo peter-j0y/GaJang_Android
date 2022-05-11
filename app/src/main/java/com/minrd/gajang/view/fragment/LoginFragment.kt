@@ -114,14 +114,14 @@ class LoginFragment : BaseFragment<FragmentLoginBinding>(R.layout.fragment_login
 
                 // 성공 시 Firebase 에 유저 정보 보내기 (로그인)
                 auth.signInWithCredential(credential)
-                    .addOnCompleteListener{ task ->
-                            if(task.isSuccessful){ // 정상적으로 email, password 가 전달된 경우
-                                    // 로그인 처리
-                                    findNavController().navigate(R.id.action_loginFragment_to_selectLivingFragment)
-                            } else {
-                                    // 예외 발생 시 메시지 출력
-                                    Toast.makeText(requireContext(), task.exception?.message, Toast.LENGTH_LONG).show()
-                            }
-                    }
+                        .addOnCompleteListener{ task ->
+                                if(task.isSuccessful){ // 정상적으로 email, password 가 전달된 경우
+                                        // 로그인 처리
+                                        findNavController().navigate(R.id.action_loginFragment_to_selectLivingFragment)
+                                } else {
+                                        // 예외 발생 시 메시지 출력
+                                        Toast.makeText(requireContext(), task.exception?.message, Toast.LENGTH_LONG).show()
+                                }
+                        }
         }
 }

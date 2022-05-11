@@ -42,57 +42,30 @@ class PriceCompareFragment : BaseFragment<FragmentPriceCompareBinding>(R.layout.
             override fun onItemSelected(p0: AdapterView<*>?, p1: View?, p2: Int, p3: Long) {
 
                 priceCompareItemName.text = priceCompareMarketSpinner.selectedItem.toString()
-                var whatItem = priceCompareMarketSpinner.selectedItem.toString()
-                if(whatItem == "고등어"){
-                    priceCompareMarketImage.setImageResource(com.minrd.gajang.R.drawable.fish)
-                }
-                else if(whatItem == "오징어"){
-                    priceCompareMarketImage.setImageResource(com.minrd.gajang.R.drawable.squid)
-                }
-                else if(whatItem == "명태"){
-                    priceCompareMarketImage.setImageResource(com.minrd.gajang.R.drawable.pollock)
-                }
-                else if(whatItem == "조기"){
-                    priceCompareMarketImage.setImageResource(com.minrd.gajang.R.drawable.jogi)
-                }
-                else if(whatItem == "달걀"){
-                    priceCompareMarketImage.setImageResource(com.minrd.gajang.R.drawable.eggs)
-                }
-                else if(whatItem == "닭고기"){
-                    priceCompareMarketImage.setImageResource(com.minrd.gajang.R.drawable.chicken)
-                }
-                else if(whatItem == "돼지고기"){
-                    priceCompareMarketImage.setImageResource(com.minrd.gajang.R.drawable.pig)
-                }
-                else if(whatItem == "쇠고기"){
-                    priceCompareMarketImage.setImageResource(com.minrd.gajang.R.drawable.cow)
-                }
-                else if(whatItem == "애호박"){
-                    priceCompareMarketImage.setImageResource(com.minrd.gajang.R.drawable.greenpumkin)
-                }
-                else if(whatItem == "오이"){
-                    priceCompareMarketImage.setImageResource(com.minrd.gajang.R.drawable.cucumber)
-                }
-                else if(whatItem == "상추"){
-                    priceCompareMarketImage.setImageResource(com.minrd.gajang.R.drawable.lettuce)
-                }
-                else if(whatItem == "양파"){
-                    priceCompareMarketImage.setImageResource(com.minrd.gajang.R.drawable.onion)
-                }
-                else if(whatItem == "무"){
-                    priceCompareMarketImage.setImageResource(com.minrd.gajang.R.drawable.radish)
-                }
-                else if(whatItem == "배추"){
-                    priceCompareMarketImage.setImageResource(com.minrd.gajang.R.drawable.cabbage)
-                }
-                else if(whatItem == "배"){
-                    priceCompareMarketImage.setImageResource(com.minrd.gajang.R.drawable.pear)
-                }
-                else{
-                    priceCompareMarketImage.setImageResource(com.minrd.gajang.R.drawable.apple)
-                }
-            }
 
+                var whatItem = priceCompareMarketSpinner.selectedItem.toString()
+                val itemName: String = when(whatItem){
+                    "고등어" -> "fish_icon"
+                    "오징어" -> "squid"
+                    "명태" -> "pollock"
+                    "조기" -> "jogi"
+                    "달걀" -> "eggs"
+                    "닭고기" -> "chicken"
+                    "돼지고기" -> "pig"
+                    "쇠고기" -> "cow"
+                    "애호박" -> "greenpumkin"
+                    "오이" -> "cucumber"
+                    "상추" -> "lettuce"
+                    "양파" -> "onion"
+                    "무" -> "radish"
+                    "배추" -> "cabbage"
+                    "배" -> "pear"
+                    else -> "apple" //사과에 대응함
+                }
+                val imageResourceId: Int = resources.getIdentifier(itemName, "drawable",requireContext().packageName)
+                priceCompareMarketImage.setImageResource(imageResourceId)
+
+            }
             override fun onNothingSelected(p0: AdapterView<*>?) {
                 TODO("Not yet implemented")
             }
