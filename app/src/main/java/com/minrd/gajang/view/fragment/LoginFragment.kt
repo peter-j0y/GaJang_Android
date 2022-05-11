@@ -1,6 +1,8 @@
 package com.minrd.gajang.view.fragment
 
+import android.content.ContentValues.TAG
 import android.content.Intent
+import android.util.Log
 import android.widget.Toast
 import androidx.navigation.fragment.findNavController
 import com.minrd.gajang.R
@@ -51,6 +53,7 @@ class LoginFragment : BaseFragment<FragmentLoginBinding>(R.layout.fragment_login
                                 account = task.getResult(ApiException::class.java)
                                 firebaseAuthWithGoogle(account!!.idToken)
                         } catch (e: ApiException) {
+                                Log.d(TAG, "onActivityResult: $e")
                                 Toast.makeText(requireActivity(), "Failed Google Login", Toast.LENGTH_SHORT).show()
                         }
                 }
