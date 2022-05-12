@@ -23,8 +23,17 @@ class MainViewModel : ViewModel() {
         _currentLivingArea.value = input
     }
 
+    // 선택한 거주지 문자열 저장하는 변수
+    private val _currentLivingAreaString = MutableLiveData<String>()
+    val livingAreaString: LiveData<String> = _currentLivingAreaString
+
+    // 거주지 문자열을 업데이트하는 함수
+    fun updateLivingAreaString(input : String){
+        _currentLivingAreaString.value = input
+    }
+
     // 현재 선택한 생필품 인덱스를 저장하는 변수
-    private val _currentSelectedNecessary = MutableLiveData<Int>()
+    private val _currentSelectedNecessary = MutableLiveData<Int>(0)
     val selectedNecessary: LiveData<Int> = _currentSelectedNecessary
 
     // 선택한 생필품 인덱스를 업데이트하는 함수
@@ -32,30 +41,20 @@ class MainViewModel : ViewModel() {
         _currentSelectedNecessary.value = input
     }
 
+    // 자세히 보고 있는 마트에 관련된 데이터
+    private val _currentSelectedMarket = MutableLiveData<String>()
+    val selectedMarket: LiveData<String> = _currentSelectedMarket
+
+    // 선택한 마트의 이름을 업데이트하는 함수
+    fun updateSelectedMarket(input : String){
+        _currentSelectedMarket.value = input
+    }
+
     // 서울시 공공데이터로부터 받은 데이터를 저장하는 변수
-    private var _currentRemoteData = MutableLiveData<ArrayList<ResponseNecessariesData.Row>>()
-    val currentRemoteData : LiveData<ArrayList<ResponseNecessariesData.Row>> = _currentRemoteData
+    private var _currentNecessariesData = MutableLiveData<ArrayList<ResponseNecessariesData>>()
+    val currentNecessariesData : LiveData<ArrayList<ResponseNecessariesData>> = _currentNecessariesData
 
-    fun updateRemoteData() {
-        val call: Call<ResponseNecessariesData> = ServiceCreator.gajangService
-            .getData(1, 12)
-
-        call.enqueue(object : Callback<ResponseNecessariesData> {
-            override fun onResponse(
-                call: Call<ResponseNecessariesData>,
-                response: Response<ResponseNecessariesData>
-            ) {
-                if (response.isSuccessful) {
-                    _currentRemoteData.value = response.body()?.ListNecessariesPricesService?.row!!
-                    Log.d(TAG, "onResponse: repository ${_currentRemoteData.value}")
-                } else {
-                    Log.d(ContentValues.TAG, "onResponse: 서버는 연결됐는데 데이터가 안옴")
-                }
-            }
-
-            override fun onFailure(call: Call<ResponseNecessariesData>, t: Throwable) {
-                Log.d(ContentValues.TAG, "onFailure: 서버 연결 실패")
-            }
-        })
+    fun updateNecessariesData(input : ArrayList<ResponseNecessariesData>){
+        _currentNecessariesData.value = input
     }
 }

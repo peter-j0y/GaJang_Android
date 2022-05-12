@@ -9,6 +9,7 @@ import com.minrd.gajang.base.BaseFragment
 import com.minrd.gajang.databinding.FragmentNearbyStoreBinding
 import com.minrd.gajang.util.GajangApplication
 import com.minrd.gajang.view.adapter.NearByAdapter
+import com.minrd.gajang.view.adapter.PriceCompareAdapter
 import com.minrd.gajang.viewmodel.MainViewModel
 
 class NearbyStoreFragment : BaseFragment<FragmentNearbyStoreBinding>(R.layout.fragment_nearby_store) {
@@ -21,11 +22,7 @@ class NearbyStoreFragment : BaseFragment<FragmentNearbyStoreBinding>(R.layout.fr
                 .get(MainViewModel::class.java)
         }
 
-        viewModel.currentRemoteData.observe(viewLifecycleOwner){
-            val nearByStoreAdapter = NearByAdapter(it)
-            binding.nearbyChoiceRcv.adapter = nearByStoreAdapter
-        }
-
+        setRecyclerViewAdapter()
     }
 
     override fun FragmentNearbyStoreBinding.onViewCreated() {
@@ -49,6 +46,10 @@ class NearbyStoreFragment : BaseFragment<FragmentNearbyStoreBinding>(R.layout.fr
         }
     }
 
+    private fun setRecyclerViewAdapter(){
+        val nearByAdapter = NearByAdapter(viewModel.currentNecessariesData.value!!)
+        binding.nearbyChoiceRcv.adapter = nearByAdapter
+    }
 }
 
 

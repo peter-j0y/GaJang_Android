@@ -43,9 +43,11 @@ class SelectLivingFragment : Fragment(){
 
     private fun selectLivingArea(){
         val selectedLivingAreaIdx = binding?.spinnerLivingList?.selectedItemPosition
+        val selectedLivingAreaString = binding?.spinnerLivingList?.selectedItem.toString()
 
         if (selectedLivingAreaIdx != null) {
             viewModel.updateLivingArea(selectedLivingAreaIdx)
+            viewModel.updateLivingAreaString(selectedLivingAreaString)
         }
         GajangApplication.prefs.setString("LivingAreaIdx", selectedLivingAreaIdx.toString())
 
