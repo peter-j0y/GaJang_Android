@@ -27,6 +27,7 @@
             android:id="@+id/action_selectLivingFragment_to_priceCompareFragment"
             app:destination="@id/priceCompareFragment" />
     </fragment>
+
     <fragment
         android:id="@+id/privacyFragment"
         android:name="com.minrd.gajang.view.fragment.PrivacyFragment"

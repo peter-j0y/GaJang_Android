@@ -27,11 +27,11 @@ android {
 
     //View Binding
     viewBinding{
-        enabled = true
+        enabled true
     }
     //Data Binding
     dataBinding {
-        enabled = true
+        enabled true
     }
 
     compileOptions {

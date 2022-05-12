@@ -26,8 +26,4 @@ class NearbyStoreDetailShowFragment : BaseFragment<FragmentNearybyStoreDetailSho
     override fun FragmentNearybyStoreDetailShowBinding.onViewCreated(){
 
     }
-
-    private fun setMarketRecyclerView(){
-
-    }
 }
