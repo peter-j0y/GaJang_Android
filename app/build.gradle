@@ -74,4 +74,6 @@ dependencies {
     // HTTP logging
     implementation('com.squareup.okhttp3:logging-interceptor:5.0.0-alpha.6')
 
+    // Open csv
+    implementation 'com.opencsv:opencsv:5.6'
 }

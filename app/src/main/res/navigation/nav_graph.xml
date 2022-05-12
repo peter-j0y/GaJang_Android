@@ -77,5 +77,9 @@
         android:id="@+id/nearbyStoreDetailShowFragment"
         android:name="com.minrd.gajang.view.fragment.NearbyStoreDetailShowFragment"
         android:label="fragment_nearyby_store_detail_show"
-        tools:layout="@layout/fragment_nearyby_store_detail_show" />
+        tools:layout="@layout/fragment_nearyby_store_detail_show" >
+        <argument
+            android:name="marketName"
+            app:argType="string" />
+    </fragment>
 </navigation>

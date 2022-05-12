@@ -7,15 +7,18 @@ import androidx.recyclerview.widget.RecyclerView
 import com.minrd.gajang.R
 import com.minrd.gajang.data.model.ResponseNecessariesData
 import com.minrd.gajang.databinding.NearbyMarketItemViewBinding
+import com.minrd.gajang.view.fragment.NearbyStoreFragmentDirections
 
-class NearByAdapter(var dataList: ArrayList<ResponseNecessariesData.Row>): RecyclerView.Adapter<NearByAdapter.MyViewHolder>() {
+class NearByAdapter(var dataList: ArrayList<ResponseNecessariesData>): RecyclerView.Adapter<NearByAdapter.MyViewHolder>() {
 
     inner class MyViewHolder(private val binding: NearbyMarketItemViewBinding): RecyclerView.ViewHolder(binding.root) {
 
-        fun bind(myData: ResponseNecessariesData.Row){
+        fun bind(myData: ResponseNecessariesData){
             binding.nearByItemData = myData
             binding.nearbyStoreItemView.setOnClickListener {
-                it.findNavController().navigate(R.id.action_nearbyStoreFragment_to_nearbyStoreDetailShowFragment)
+                // 마트 하나를 자세히 보려고 눌렀을 때 마트 이름을 자세히 보기 뷰로 전달하고 자세히 보기 뷰로 이동함
+                val action = NearbyStoreFragmentDirections.actionNearbyStoreFragmentToNearbyStoreDetailShowFragment(myData.M_NAME!!)
+                it.findNavController().navigate(action)
             }
         }
     }

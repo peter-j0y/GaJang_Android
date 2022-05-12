@@ -7,6 +7,7 @@ import androidx.lifecycle.ViewModelProvider
 import com.minrd.gajang.R
 import com.minrd.gajang.base.BaseFragment
 import com.minrd.gajang.databinding.FragmentPriceCompareBinding
+import com.minrd.gajang.view.adapter.NearByAdapter
 import com.minrd.gajang.view.adapter.PriceCompareAdapter
 import com.minrd.gajang.viewmodel.MainViewModel
 
@@ -19,26 +20,28 @@ class PriceCompareFragment : BaseFragment<FragmentPriceCompareBinding>(R.layout.
             viewModel = ViewModelProvider(this, ViewModelProvider.NewInstanceFactory())
                 .get(MainViewModel::class.java)
         }
-
-        viewModel.updateRemoteData()
-
-        viewModel.currentRemoteData.observe(viewLifecycleOwner) {
-            val priceCompareAdapter = PriceCompareAdapter(it)
-            binding.priceCompareRcv.adapter = priceCompareAdapter
-        }
+        setRecyclerViewAdapter()
     }
 
-    override fun FragmentPriceCompareBinding.onViewCreated(){
+    override fun FragmentPriceCompareBinding.onViewCreated() {
+        setNecessarySpinner()
+    }
 
+    private fun setRecyclerViewAdapter(){
+        val priceCompareAdapter = PriceCompareAdapter(viewModel.currentNecessariesData.value!!)
+        binding.priceCompareRcv.adapter = priceCompareAdapter
+    }
 
-        var itemData = resources.getStringArray(R.array.item_array)
-        var adapter = ArrayAdapter<String>(requireContext(), android.R.layout.simple_spinner_item, itemData)
+    private fun setNecessarySpinner(){
+        val necessariesItemData = resources.getStringArray(R.array.item_array)
+        val priceCompareAdapter = ArrayAdapter(requireContext(), android.R.layout.simple_spinner_item, necessariesItemData)
+        val priceCompareSpinner = binding.priceCompareMarketSpinner
+        val priceCompareMarketImage = binding.priceCompareMarketImage
 
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
-        priceCompareMarketSpinner.adapter = adapter
-
-        priceCompareMarketSpinner.setSelection(1)
-        priceCompareMarketSpinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
+        priceCompareAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+        priceCompareSpinner.adapter = priceCompareAdapter
+        priceCompareSpinner.setSelection(viewModel.selectedNecessary.value!!)
+        priceCompareSpinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
             override fun onItemSelected(p0: AdapterView<*>?, p1: View?, p2: Int, p3: Long) {
 
                 priceCompareItemName.text = priceCompareMarketSpinner.selectedItem.toString()
@@ -69,7 +72,6 @@ class PriceCompareFragment : BaseFragment<FragmentPriceCompareBinding>(R.layout.
             override fun onNothingSelected(p0: AdapterView<*>?) {
                 TODO("Not yet implemented")
             }
-
         }
     }
 }

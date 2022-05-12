@@ -6,10 +6,10 @@ import androidx.recyclerview.widget.RecyclerView
 import com.minrd.gajang.data.model.ResponseNecessariesData
 import com.minrd.gajang.databinding.PriceCompareItemViewBinding
 
-class PriceCompareAdapter(var dataList: ArrayList<ResponseNecessariesData.Row>): RecyclerView.Adapter<PriceCompareAdapter.MyViewHolder>() {
+class PriceCompareAdapter(var dataList: ArrayList<ResponseNecessariesData>): RecyclerView.Adapter<PriceCompareAdapter.MyViewHolder>() {
 
     inner class MyViewHolder(private val binding: PriceCompareItemViewBinding): RecyclerView.ViewHolder(binding.root) {
-        fun bind(myData: ResponseNecessariesData.Row){
+        fun bind(myData: ResponseNecessariesData){
             binding.priceCompareItemData = myData
         }
     }
