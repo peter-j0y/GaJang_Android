@@ -5,6 +5,7 @@
         <variable
             name="nearByItemData"
             type="com.minrd.gajang.data.model.ResponseNecessariesData" />
+
     </data>
 
     <LinearLayout
@@ -29,7 +30,7 @@
                 android:layout_width="110dp"
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
-                android:background="@drawable/emart" />
+                android:src="@drawable/lottesuper" />
 
             <LinearLayout
                 android:layout_width="fill_parent"

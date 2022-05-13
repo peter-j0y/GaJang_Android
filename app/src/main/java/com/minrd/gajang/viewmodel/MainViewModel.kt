@@ -28,6 +28,12 @@ class MainViewModel : ViewModel() {
         "롯데슈퍼" to "lottesuper"
     )
 
+    fun updateMarketImage (input: String){
+        val whatIsMartName = currentMarketName.get(input)
+
+//        price_compare_item_view_image
+    }
+
     //상품이름과 사진을 key, value로 가지는 mapOf. (key,value) - (상품이름, 상품이미지이름)
     private val currentItemName = mutableMapOf<String, String>(
         "고등어" to "fish_icon",
