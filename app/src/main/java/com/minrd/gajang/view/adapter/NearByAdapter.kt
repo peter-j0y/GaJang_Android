@@ -15,6 +15,39 @@ class NearByAdapter(var dataList: ArrayList<ResponseNecessariesData>): RecyclerV
 
         fun bind(myData: ResponseNecessariesData){
             binding.nearByItemData = myData
+            if(myData.M_NAME!!.contains("롯데슈퍼")){
+                binding.nearbyMarketImg.setImageResource(R.drawable.lottesuper)
+            }
+            else if(myData.M_NAME!!.contains("이마트")){
+                binding.nearbyMarketImg.setImageResource(R.drawable.emart)
+            }
+            else if(myData.M_NAME!!.contains("홈플러스")){
+                binding.nearbyMarketImg.setImageResource(R.drawable.homeplus)
+            }
+            else if(myData.M_NAME!!.contains("현대백화점")){
+                binding.nearbyMarketImg.setImageResource(R.drawable.hyundaidepartmentstore)
+            }
+            else if(myData.M_NAME!!.contains("신세계백화점")){
+                binding.nearbyMarketImg.setImageResource(R.drawable.sinsagae)
+            }
+            else if(myData.M_NAME!!.contains("롯데백화점")){
+                binding.nearbyMarketImg.setImageResource(R.drawable.lottedepart)
+            }
+            else if(myData.M_NAME!!.contains("뉴코아")){
+                binding.nearbyMarketImg.setImageResource(R.drawable.newcore)
+            }
+            else if(myData.M_NAME!!.contains("하나로")){
+                binding.nearbyMarketImg.setImageResource(R.drawable.hanaro)
+            }
+            else if(myData.M_NAME!!.contains("NC")){
+                binding.nearbyMarketImg.setImageResource(R.drawable.ncdepart)
+            }
+            else if(myData.M_NAME!!.contains("롯데마트")){
+                binding.nearbyMarketImg.setImageResource(R.drawable.lottemart)
+            }
+            else{
+                binding.nearbyMarketImg.setImageResource(R.drawable.market)
+            }
             binding.nearbyStoreItemView.setOnClickListener {
                 // 마트 하나를 자세히 보려고 눌렀을 때 마트 이름을 자세히 보기 뷰로 전달하고 자세히 보기 뷰로 이동함
                 val action = NearbyStoreFragmentDirections.actionNearbyStoreFragmentToNearbyStoreDetailShowFragment(myData.M_NAME!!)
