@@ -80,6 +80,15 @@ class MainViewModel : ViewModel() {
         _currentSelectedNecessary.value = input
     }
 
+    // 선택한 생필품 문자열을 저장하는 변수
+    private val _currentSelectedNecessaryString = MutableLiveData<String>()
+    val selectedNecessaryString: LiveData<String> = _currentSelectedNecessaryString
+
+    // 선택한 생필품 문자열을 업데이트하는 함수
+    fun updateNecessaryString(input : String){
+        _currentSelectedNecessaryString.value = input
+    }
+
     // 자세히 보고 있는 마트에 관련된 데이터
     private val _currentSelectedMarket = MutableLiveData<String>()
     val selectedMarket: LiveData<String> = _currentSelectedMarket

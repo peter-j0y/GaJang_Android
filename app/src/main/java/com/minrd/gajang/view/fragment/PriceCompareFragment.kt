@@ -44,8 +44,8 @@ class PriceCompareFragment : BaseFragment<FragmentPriceCompareBinding>(R.layout.
         priceCompareSpinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
             override fun onItemSelected(p0: AdapterView<*>?, p1: View?, p2: Int, p3: Long) {
 
-//                binding.priceCompareItemName.text = binding.priceCompareMarketSpinner.selectedItem.toString()
                 binding.priceCompareItemName.text = binding.priceCompareMarketSpinner.selectedItem.toString()
+
                 var whatItem = binding.priceCompareMarketSpinner.selectedItem.toString()
                 val itemName: String = when(whatItem){
                     "고등어" -> "fish_icon"
