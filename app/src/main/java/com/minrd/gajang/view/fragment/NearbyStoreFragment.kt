@@ -49,6 +49,7 @@ class NearbyStoreFragment : BaseFragment<FragmentNearbyStoreBinding>(R.layout.fr
     private fun setRecyclerViewAdapter(){
         val nearByAdapter = NearByAdapter(viewModel.currentNecessariesData.value!!)
         binding.nearbyChoiceRcv.adapter = nearByAdapter
+
     }
 }
 

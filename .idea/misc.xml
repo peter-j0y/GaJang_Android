@@ -84,8 +84,10 @@
         <entry key="app/src/main/res/layout/fragment_select_living.xml" value="0.8921875" />
         <entry key="app/src/main/res/layout/fragment_splash.xml" value="0.5453125" />
         <entry key="app/src/main/res/layout/nearby_item_view.xml" value="0.4338905775075988" />
+        <entry key="app/src/main/res/layout/nearby_market_item_view.xml" value="0.1024673461914064" />
         <entry key="app/src/main/res/layout/nearby_market_view.xml" value="0.8921875" />
-        <entry key="app/src/main/res/layout/price_compare_item_view.xml" value="0.4338905775075988" />
+        <entry key="app/src/main/res/layout/nearby_store_detail_item_view.xml" value="0.5447916666666667" />
+        <entry key="app/src/main/res/layout/price_compare_item_view.xml" value="0.26419213973799127" />
         <entry key="app/src/main/res/menu/bottom_nav_menu.xml" value="0.5453125" />
       </map>
     </option>

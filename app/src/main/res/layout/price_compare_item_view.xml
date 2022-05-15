@@ -5,6 +5,9 @@
         <variable
             name="priceCompareItemData"
             type="com.minrd.gajang.data.model.ResponseNecessariesData" />
+        <variable
+            name="priceCompareImageData"
+            type="String" />
     </data>
 
     <LinearLayout
@@ -27,7 +30,7 @@
                 android:layout_width="80dp"
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
-                android:background="@drawable/lottemart" />
+                android:src="@drawable/lottesuper" />
 
             <GridLayout
                 android:layout_width="match_parent"
