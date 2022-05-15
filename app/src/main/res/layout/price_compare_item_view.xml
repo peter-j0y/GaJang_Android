@@ -44,7 +44,9 @@
                     android:gravity="center"
                     android:textStyle="bold"
                     android:textSize="17sp"
-                    android:maxLength="5"
+                    android:maxLines="1"
+                    android:ems="6"
+                    android:ellipsize="end"
                     android:background="@drawable/border_down"
                     android:layout_columnWeight="1" />
 
@@ -54,8 +56,10 @@
                     android:text="@{priceCompareItemData.m_NAME}"
                     android:gravity="center"
                     android:textStyle="bold"
+                    android:ellipsize="end"
                     android:textSize="17sp"
-                    android:maxLength="5"
+                    android:maxLines="1"
+                    android:ems="6"
                     android:background="@drawable/border_down_left"
                     android:layout_columnWeight="1" />
 
@@ -64,7 +68,9 @@
                     android:layout_height="37.5dp"
                     android:text="@{priceCompareItemData.ADD_COL}"
                     android:gravity="center"
-                    android:maxLength="5"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:ems="6"
                     android:textSize="14sp"
                     android:layout_columnWeight="1" />
 
@@ -73,7 +79,9 @@
                     android:layout_height="37.5dp"
                     android:text="@{priceCompareItemData.m_GU_NAME}"
                     android:gravity="center"
-                    android:maxLength="5"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:ems="6"
                     android:textSize="14sp"
                     android:background="@drawable/border_left"
                     android:layout_columnWeight="1" />

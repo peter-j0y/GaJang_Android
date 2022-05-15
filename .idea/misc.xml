@@ -10,6 +10,7 @@
         <entry key="..\:/Users/Seungmin/GitProjects/GaJang_Android/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1" />
         <entry key="..\:/Users/Seungmin/GitProjects/GaJang_Android/app/src/main/res/layout/activity_main.xml" value="0.15" />
         <entry key="..\:/Users/Seungmin/GitProjects/GaJang_Android/app/src/main/res/layout/bottom_nav_menu.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Seungmin/GitProjects/GaJang_Android/app/src/main/res/layout/fragment_change_living.xml" value="0.1453125" />
         <entry key="..\:/Users/Seungmin/GitProjects/GaJang_Android/app/src/main/res/layout/fragment_login.xml" value="0.38697916666666665" />
         <entry key="..\:/Users/Seungmin/GitProjects/GaJang_Android/app/src/main/res/layout/fragment_my_info.xml" value="0.38697916666666665" />
         <entry key="..\:/Users/Seungmin/GitProjects/GaJang_Android/app/src/main/res/layout/fragment_nearby_store.xml" value="0.1" />
@@ -74,20 +75,16 @@
         <entry key="app/src/main/res/drawable/icon_google.xml" value="0.281" />
         <entry key="app/src/main/res/drawable/login_logo.xml" value="0.4245" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.4279891304347826" />
-        <entry key="app/src/main/res/layout/fragment_change_living.xml" value="0.5447916666666667" />
         <entry key="app/src/main/res/layout/fragment_login.xml" value="0.4279891304347826" />
         <entry key="app/src/main/res/layout/fragment_my_info.xml" value="0.4336372847011145" />
         <entry key="app/src/main/res/layout/fragment_nearby_store.xml" value="0.4338905775075988" />
         <entry key="app/src/main/res/layout/fragment_nearby_store_detail.xml" value="0.5535903930664062" />
-        <entry key="app/src/main/res/layout/fragment_nearyby_store_detail_show.xml" value="0.608515057113188" />
+        <entry key="app/src/main/res/layout/fragment_nearyby_store_detail_show.xml" value="0.8921875" />
         <entry key="app/src/main/res/layout/fragment_price_compare.xml" value="0.4338905775075988" />
-        <entry key="app/src/main/res/layout/fragment_privacy.xml" value="0.4338905775075988" />
-        <entry key="app/src/main/res/layout/fragment_select_living.xml" value="0.47646484375" />
+        <entry key="app/src/main/res/layout/fragment_select_living.xml" value="0.8921875" />
         <entry key="app/src/main/res/layout/fragment_splash.xml" value="0.5453125" />
         <entry key="app/src/main/res/layout/nearby_item_view.xml" value="0.4338905775075988" />
-        <entry key="app/src/main/res/layout/nearby_market_item_view.xml" value="0.5447916666666667" />
         <entry key="app/src/main/res/layout/nearby_market_view.xml" value="0.8921875" />
-        <entry key="app/src/main/res/layout/nearby_store_detail_item_view.xml" value="0.5447916666666667" />
         <entry key="app/src/main/res/layout/price_compare_item_view.xml" value="0.4338905775075988" />
         <entry key="app/src/main/res/menu/bottom_nav_menu.xml" value="0.5453125" />
       </map>
