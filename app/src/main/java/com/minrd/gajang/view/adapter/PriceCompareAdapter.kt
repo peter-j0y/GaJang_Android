@@ -15,7 +15,7 @@ import com.minrd.gajang.databinding.FragmentNearybyStoreDetailShowBinding
 import com.minrd.gajang.databinding.PriceCompareItemViewBinding
 
 
-class PriceCompareAdapter(var dataList: ArrayList<ResponseNecessariesData>): RecyclerView.Adapter<PriceCompareAdapter.MyViewHolder>() {
+class PriceCompareAdapter(var dataList: MutableList<ResponseNecessariesData> = ArrayList()): RecyclerView.Adapter<PriceCompareAdapter.MyViewHolder>() {
 
     inner class MyViewHolder(private val binding: PriceCompareItemViewBinding): RecyclerView.ViewHolder(binding.root) {
         fun bind(myData: ResponseNecessariesData){
@@ -69,7 +69,6 @@ class PriceCompareAdapter(var dataList: ArrayList<ResponseNecessariesData>): Rec
     //적절한 데이터를 가져와서 그 데이터를 사용하여 뷰홀더의 레이아웃 채움
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
         holder.bind(dataList[position])
-
     }
 
 

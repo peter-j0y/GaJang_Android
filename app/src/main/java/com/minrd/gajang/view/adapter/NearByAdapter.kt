@@ -1,5 +1,6 @@
 package com.minrd.gajang.view.adapter
 
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.navigation.findNavController
@@ -9,7 +10,8 @@ import com.minrd.gajang.data.model.ResponseNecessariesData
 import com.minrd.gajang.databinding.NearbyMarketItemViewBinding
 import com.minrd.gajang.view.fragment.NearbyStoreFragmentDirections
 
-class NearByAdapter(var dataList: ArrayList<ResponseNecessariesData>): RecyclerView.Adapter<NearByAdapter.MyViewHolder>() {
+class NearByAdapter(var dataList: MutableList<ResponseNecessariesData> = ArrayList(), var userSelected: String): RecyclerView.Adapter<NearByAdapter.MyViewHolder>() {
+
 
     inner class MyViewHolder(private val binding: NearbyMarketItemViewBinding): RecyclerView.ViewHolder(binding.root) {
 
@@ -68,6 +70,10 @@ class NearByAdapter(var dataList: ArrayList<ResponseNecessariesData>): RecyclerV
     //recyclerview가 viewholder를 가져와 데이터 연결할때 호출
     //적절한 데이터를 가져와서 그 데이터를 사용하여 뷰홀더의 레이아웃 채움
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
-        holder.bind(dataList[position])
+        Log.d("스피너", userSelected);
+        Log.d("데이터", dataList[position].M_GU_NAME.toString());
+        if(userSelected!! == dataList[position].M_GU_NAME) {
+            holder.bind(dataList[position])
+        }
     }
 }
