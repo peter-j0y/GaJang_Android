@@ -1,17 +1,19 @@
 package com.minrd.gajang
 
 import android.content.ContentValues.TAG
-import androidx.appcompat.app.AppCompatActivity
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.util.Log
 import android.view.View
+import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.NavigationUI
+import com.google.android.gms.oss.licenses.OssLicensesMenuActivity
 import com.minrd.gajang.data.model.ResponseNecessariesData
 import com.minrd.gajang.databinding.ActivityMainBinding
 import com.minrd.gajang.viewmodel.MainViewModel
-import org.json.JSONArray
 import org.json.JSONException
 import org.json.JSONObject
 
@@ -50,8 +52,19 @@ class MainActivity : AppCompatActivity() {
             viewModel = ViewModelProvider(this, ViewModelProvider.NewInstanceFactory())
                 .get(MainViewModel::class.java)
         }
-
         jsonParsing()
+
+    }
+
+    // 오픈소스라이선스를 보여주는 함수
+    public fun showOssLicense(){
+        val intent = Intent(this, OssLicensesMenuActivity::class.java)
+        startActivity(intent)
+    }
+    // 개인정보처리방침 URL을 연결해주는 함수
+    public fun showPersonalPrivacy(){
+        var intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://puzzling-meadowlark-baf.notion.site/71e24b1daf3648918b56e6245a4e4592"))
+        startActivity(intent)
     }
 
     private fun jsonParsing(){
