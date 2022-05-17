@@ -6,6 +6,7 @@ import android.widget.ArrayAdapter
 import androidx.lifecycle.ViewModelProvider
 import com.minrd.gajang.R
 import com.minrd.gajang.base.BaseFragment
+import com.minrd.gajang.data.model.ResponseNecessariesData
 import com.minrd.gajang.databinding.FragmentNearbyStoreBinding
 import com.minrd.gajang.util.GajangApplication
 import com.minrd.gajang.view.adapter.NearByAdapter
@@ -31,12 +32,33 @@ class NearbyStoreFragment : BaseFragment<FragmentNearbyStoreBinding>(R.layout.fr
         val adapter = ArrayAdapter<String>(requireContext(), android.R.layout.simple_spinner_item, marketData) //어뎁터와 연동
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item); //어뎁터 드롭다운
         nearbyChoiceItemSpinner.adapter = adapter //스피너와 연동
-
         nearbyChoiceItemSpinner.setSelection(GajangApplication.prefs.getString("LivingAreaIdx", "1").toInt()) //우선적으로 값 넣어놓기
 
         nearbyChoiceItemSpinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
             override fun onItemSelected(p0: AdapterView<*>?, p1: View?, p2: Int, p3: Long) {
+                var sub : ArrayList<ResponseNecessariesData> = viewModel.currentNecessariesData.value!!
+                var dataList: MutableList<ResponseNecessariesData> = ArrayList()
+                var check : MutableList<String> = ArrayList()
 
+                var it = sub.iterator()
+                while(it.hasNext()){
+                    var name = it.next().M_GU_NAME!!
+                    if(name!! == nearbyChoiceItemSpinner.selectedItem.toString()!!){
+                        var iter = check.iterator()
+                        var checking = 0
+                        while(iter.hasNext()){
+                            if(it.next().M_NAME == iter.next()){
+                                checking = 1
+                            }
+                        }
+                        if(checking == 0) {
+                            check.add(it.next().M_NAME!!)
+                            dataList.add(it.next())
+                        }
+                    }
+                }
+                val nearByAdapter = NearByAdapter(dataList, nearbyChoiceItemSpinner.selectedItem.toString()!!)
+                binding.nearbyChoiceRcv.adapter = nearByAdapter
             }
 
             override fun onNothingSelected(p0: AdapterView<*>?) {
@@ -47,9 +69,8 @@ class NearbyStoreFragment : BaseFragment<FragmentNearbyStoreBinding>(R.layout.fr
     }
 
     private fun setRecyclerViewAdapter(){
-        val nearByAdapter = NearByAdapter(viewModel.currentNecessariesData.value!!)
+        val nearByAdapter = NearByAdapter(viewModel.currentNecessariesData.value!!, "송파구")
         binding.nearbyChoiceRcv.adapter = nearByAdapter
-
     }
 }
 
