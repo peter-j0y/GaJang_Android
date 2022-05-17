@@ -6,6 +6,7 @@ import android.widget.ArrayAdapter
 import androidx.lifecycle.ViewModelProvider
 import com.minrd.gajang.R
 import com.minrd.gajang.base.BaseFragment
+import com.minrd.gajang.data.model.ResponseNecessariesData
 import com.minrd.gajang.databinding.FragmentPriceCompareBinding
 import com.minrd.gajang.view.adapter.NearByAdapter
 import com.minrd.gajang.view.adapter.PriceCompareAdapter
@@ -67,6 +68,19 @@ class PriceCompareFragment : BaseFragment<FragmentPriceCompareBinding>(R.layout.
                 }
                 val imageResourceId: Int = resources.getIdentifier(itemName, "drawable",requireContext().packageName)
                 priceCompareMarketImage.setImageResource(imageResourceId)
+
+                var sub : ArrayList<ResponseNecessariesData> = viewModel.currentNecessariesData.value!!
+                var dataList: MutableList<ResponseNecessariesData> = ArrayList()
+
+                var it = sub.iterator()
+                while(it.hasNext()){
+                    var name = it.next().A_NAME!!
+                    if(name.contains(priceCompareSpinner.selectedItem.toString()!!)){
+                            dataList.add(it.next()!!)
+                    }
+                }
+                val priceCompareAdapter = PriceCompareAdapter(dataList)
+                binding.priceCompareRcv.adapter = priceCompareAdapter
 
             }
             override fun onNothingSelected(p0: AdapterView<*>?) {
