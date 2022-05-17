@@ -1,6 +1,7 @@
 package com.minrd.gajang.view.adapter
 
 import android.content.ContentValues
+import android.content.ContentValues.TAG
 import android.graphics.drawable.Drawable
 import android.util.Log
 import android.view.LayoutInflater
@@ -19,7 +20,10 @@ class PriceCompareAdapter(var dataList: MutableList<ResponseNecessariesData> = A
 
     inner class MyViewHolder(private val binding: PriceCompareItemViewBinding): RecyclerView.ViewHolder(binding.root) {
         fun bind(myData: ResponseNecessariesData){
+
             binding.priceCompareItemData = myData
+            Log.d(TAG, "bind: $myData")
+
             if(myData.M_NAME!!.contains("롯데슈퍼")){
                 binding.priceCompareItemViewImage.setImageResource(R.drawable.lottesuper)
             }

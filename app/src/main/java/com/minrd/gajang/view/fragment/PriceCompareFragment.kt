@@ -1,5 +1,7 @@
 package com.minrd.gajang.view.fragment
 
+import android.nfc.Tag
+import android.util.Log
 import android.view.View
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
@@ -35,12 +37,12 @@ class PriceCompareFragment : BaseFragment<FragmentPriceCompareBinding>(R.layout.
 
     private fun setNecessarySpinner(){
         val necessariesItemData = resources.getStringArray(R.array.item_array)
-        val priceCompareAdapter = ArrayAdapter(requireContext(), android.R.layout.simple_spinner_item, necessariesItemData)
+        val priceCompareSpinnerAdapter = ArrayAdapter(requireContext(), android.R.layout.simple_spinner_item, necessariesItemData)
         val priceCompareSpinner = binding.priceCompareMarketSpinner
         val priceCompareMarketImage = binding.priceCompareMarketImage
 
-        priceCompareAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
-        priceCompareSpinner.adapter = priceCompareAdapter
+        priceCompareSpinnerAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+        priceCompareSpinner.adapter = priceCompareSpinnerAdapter
         priceCompareSpinner.setSelection(viewModel.selectedNecessary.value!!)
         priceCompareSpinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
             override fun onItemSelected(p0: AdapterView<*>?, p1: View?, p2: Int, p3: Long) {
@@ -72,15 +74,18 @@ class PriceCompareFragment : BaseFragment<FragmentPriceCompareBinding>(R.layout.
                 var sub : ArrayList<ResponseNecessariesData> = viewModel.currentNecessariesData.value!!
                 var dataList: MutableList<ResponseNecessariesData> = ArrayList()
 
-                var it = sub.iterator()
-                while(it.hasNext()){
-                    var name = it.next().A_NAME!!
-                    if(name.contains(priceCompareSpinner.selectedItem.toString()!!)){
-                            dataList.add(it.next()!!)
+                sub.forEach {
+                    val name = it.A_NAME
+                    if (name != null) {
+                        if (name.contains(priceCompareSpinner.selectedItem.toString())) {
+                            dataList.add(it)
+                        }
                     }
                 }
-                val priceCompareAdapter = PriceCompareAdapter(dataList)
-                binding.priceCompareRcv.adapter = priceCompareAdapter
+
+//
+                val priceCompareRecyclerViewAdapter = PriceCompareAdapter(dataList)
+                binding.priceCompareRcv.adapter = priceCompareRecyclerViewAdapter
 
             }
             override fun onNothingSelected(p0: AdapterView<*>?) {
