@@ -16,7 +16,8 @@
 
         <ImageView
             android:id="@+id/nearby_choice_item_image"
-            android:src="@drawable/fish"
+            android:background="@color/white"
+            android:src="@drawable/fish_icon"
             android:layout_width="100dp"
             android:layout_height="100dp"
             app:layout_constraintTop_toTopOf="parent"

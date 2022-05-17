@@ -2,5 +2,5 @@
     <string name="app_name">GaJang_Android</string>
     <string name="web_client_id">14446595289-ik3iclc8tldjrs5jt9v2p7lpqgn73pf4.apps.googleusercontent.com</string>
     <string name="facebook_app_id">1033885244194558</string>
-
+    <string name="change_living_comment">고객님의 현재 거주지는 %s입니다.</string>
 </resources>

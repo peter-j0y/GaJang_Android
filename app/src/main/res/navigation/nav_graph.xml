@@ -37,6 +37,12 @@
         android:name="com.minrd.gajang.view.fragment.ChangeLivingFragment"
         android:label="fragment_changeLiving"
         tools:layout="@layout/fragment_change_living" >
+        <action
+            android:id="@+id/action_changeLivingFragment_to_priceCompareFragment"
+            app:destination="@id/nearbyStoreFragment" />
+        <argument
+            android:name="changeLivingName"
+            app:argType="string" />
     </fragment>
 
     <fragment
