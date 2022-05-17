@@ -4,6 +4,7 @@ import android.view.View
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.navArgs
 import com.minrd.gajang.R
 import com.minrd.gajang.base.BaseFragment
 import com.minrd.gajang.data.model.ResponseNecessariesData
@@ -68,6 +69,8 @@ class PriceCompareFragment : BaseFragment<FragmentPriceCompareBinding>(R.layout.
                 }
                 val imageResourceId: Int = resources.getIdentifier(itemName, "drawable",requireContext().packageName)
                 priceCompareMarketImage.setImageResource(imageResourceId)
+
+
 
                 var sub : ArrayList<ResponseNecessariesData> = viewModel.currentNecessariesData.value!!
                 var dataList: MutableList<ResponseNecessariesData> = ArrayList()

@@ -50,6 +50,7 @@ class SelectLivingFragment : Fragment(){
             viewModel.updateLivingAreaString(selectedLivingAreaString)
         }
         GajangApplication.prefs.setString("LivingAreaIdx", selectedLivingAreaIdx.toString())
+        GajangApplication.prefs.setString("LivingAreaString", selectedLivingAreaString)
 
         findNavController().navigate(R.id.action_selectLivingFragment_to_priceCompareFragment)
     }
