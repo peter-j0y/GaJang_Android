@@ -1,5 +1,7 @@
 package com.minrd.gajang.view.fragment
 
+import android.content.ContentValues.TAG
+import android.util.Log
 import android.view.View
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
@@ -36,11 +38,6 @@ class NearbyStoreFragment : BaseFragment<FragmentNearbyStoreBinding>(R.layout.fr
 
         nearbyChoiceItemSpinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
             override fun onItemSelected(p0: AdapterView<*>?, p1: View?, p2: Int, p3: Long) {
-                var sub : ArrayList<ResponseNecessariesData> = viewModel.currentNecessariesData.value!!
-                var dataList: MutableList<ResponseNecessariesData> = ArrayList()
-                var check : MutableList<String> = ArrayList()
-
-
                 var LocationItem = binding.nearbyChoiceItemSpinner.selectedItem.toString()
                 val locationName: String = when(LocationItem){
                     "강동구" -> "gangdonggulogo"
@@ -61,29 +58,27 @@ class NearbyStoreFragment : BaseFragment<FragmentNearbyStoreBinding>(R.layout.fr
                 }
                 val livingResourceId: Int = resources.getIdentifier(locationName, "drawable",requireContext().packageName)
                 nearbyChoiceItemImage.setImageResource(livingResourceId)
+              
+                val sub : ArrayList<ResponseNecessariesData> = viewModel.currentNecessariesData.value!!
+                val dataList: MutableList<ResponseNecessariesData> = ArrayList()
+                val check : MutableList<String> = ArrayList()
 
-
-
-
-
-                var it = sub.iterator()
-                while(it.hasNext()){
-                    var name = it.next().M_GU_NAME!!
-                    if(name!! == nearbyChoiceItemSpinner.selectedItem.toString()!!){
-                        var iter = check.iterator()
-                        var checking = 0
-                        while(iter.hasNext()){
-                            if(it.next().M_NAME == iter.next()){
-                                checking = 1
+                sub.forEach{
+                    val name = it.M_GU_NAME
+                    if (name != null) {
+                        if(name.contains(nearbyChoiceItemSpinner.selectedItem.toString())){
+                            var checking = 0
+                            if (it.M_NAME in check){
+                                   checking = 1
                             }
-                        }
-                        if(checking == 0) {
-                            check.add(it.next().M_NAME!!)
-                            dataList.add(it.next())
+                            if(checking == 0) {
+                                check.add(it.M_NAME!!)
+                                dataList.add(it)
+                            }
                         }
                     }
                 }
-                val nearByAdapter = NearByAdapter(dataList, nearbyChoiceItemSpinner.selectedItem.toString()!!)
+                val nearByAdapter = NearByAdapter(dataList)
                 binding.nearbyChoiceRcv.adapter = nearByAdapter
             }
 
@@ -95,7 +90,7 @@ class NearbyStoreFragment : BaseFragment<FragmentNearbyStoreBinding>(R.layout.fr
     }
 
     private fun setRecyclerViewAdapter(){
-        val nearByAdapter = NearByAdapter(viewModel.currentNecessariesData.value!!, "송파구")
+        val nearByAdapter = NearByAdapter(viewModel.currentNecessariesData.value!!)
         binding.nearbyChoiceRcv.adapter = nearByAdapter
     }
 }

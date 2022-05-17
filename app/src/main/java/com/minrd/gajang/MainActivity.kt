@@ -62,7 +62,7 @@ class MainActivity : AppCompatActivity() {
             val data = JSONObject(jsonString)
             val jsonArray = data.optJSONArray("Data")
             var i = 0
-            while(i < 1000){
+            while(i < jsonArray.length()){
                 val jsonObject = jsonArray.getJSONObject(i)
                 
                 val m_gu_name = jsonObject.getString("m_gu_name")
