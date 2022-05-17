@@ -14,13 +14,9 @@
             android:id="@+id/action_myInfoFragment_to_loginFragment"
             app:destination="@id/loginFragment" />
         <action
-            android:id="@+id/action_myInfoFragment_to_privacyFragment"
-            app:destination="@id/privacyFragment" />
-        <action
             android:id="@+id/action_myInfoFragment_to_changeLivingFragment"
             app:destination="@id/changeLivingFragment" />
     </fragment>
-
 
     <fragment
         android:id="@+id/selectLivingFragment"
@@ -44,12 +40,6 @@
             android:name="changeLivingName"
             app:argType="string" />
     </fragment>
-
-    <fragment
-        android:id="@+id/privacyFragment"
-        android:name="com.minrd.gajang.view.fragment.PrivacyFragment"
-        android:label="fragment_spinner"
-        tools:layout="@layout/fragment_privacy" />
 
     <fragment
         android:id="@+id/nearbyStoreFragment"

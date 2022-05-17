@@ -27,7 +27,6 @@ class NearbyStoreFragment : BaseFragment<FragmentNearbyStoreBinding>(R.layout.fr
 
         setRecyclerViewAdapter()
     }
-
     override fun FragmentNearbyStoreBinding.onViewCreated() {
         var marketData = resources.getStringArray(R.array.living_array) //마켓들의 정보를 넣어놓기
         var marketImage = resources.getStringArray(R.array.item_image) //각 마켓들의 이미지 넣어놓기
@@ -39,23 +38,7 @@ class NearbyStoreFragment : BaseFragment<FragmentNearbyStoreBinding>(R.layout.fr
         nearbyChoiceItemSpinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
             override fun onItemSelected(p0: AdapterView<*>?, p1: View?, p2: Int, p3: Long) {
                 var LocationItem = binding.nearbyChoiceItemSpinner.selectedItem.toString()
-                val locationName: String = when(LocationItem){
-                    "강동구" -> "gangdonggulogo"
-                    "송파구" -> "songpagulogo"
-                    "강남구" -> "gangnamlogo"
-                    "서초구" -> "seochogulogo"
-                    "관악구" -> "kwanakgulogo"
-                    "영등포구" -> "yeongdeunglogo"
-                    "금천구" -> "geumcheongulogo"
-                    "구로구" -> "gurogulogo"
-                    "강서구" -> "gangseogulogo"
-                    "양천구" -> "yangcheongulogo"
-                    "마포구" -> "mapogulogo"
-                    "서대문구" -> "seodaelogo"
-                    "은평구" -> "eunpyeonggulogo"
-                    "노원구" -> "nowonlogo"
-                    else -> "dobonggulogo" //도봉구에 대응함
-                }
+                val locationName = whatIsLivingSelected(LocationItem)
                 val livingResourceId: Int = resources.getIdentifier(locationName, "drawable",requireContext().packageName)
                 nearbyChoiceItemImage.setImageResource(livingResourceId)
               
@@ -87,6 +70,27 @@ class NearbyStoreFragment : BaseFragment<FragmentNearbyStoreBinding>(R.layout.fr
             }
 
         }
+    }
+
+    private fun whatIsLivingSelected(locationOfUser:String):String{
+        val locationNameOfUser: String = when(locationOfUser){
+            "강동구" -> "gangdonggulogo"
+            "송파구" -> "songpagulogo"
+            "강남구" -> "gangnamlogo"
+            "서초구" -> "seochogulogo"
+            "관악구" -> "kwanakgulogo"
+            "영등포구" -> "yeongdeunglogo"
+            "금천구" -> "geumcheongulogo"
+            "구로구" -> "gurogulogo"
+            "강서구" -> "gangseogulogo"
+            "양천구" -> "yangcheongulogo"
+            "마포구" -> "mapogulogo"
+            "서대문구" -> "seodaelogo"
+            "은평구" -> "eunpyeonggulogo"
+            "노원구" -> "nowonlogo"
+            else -> "dobonggulogo" //도봉구에 대응함
+        }
+        return locationNameOfUser
     }
 
     private fun setRecyclerViewAdapter(){

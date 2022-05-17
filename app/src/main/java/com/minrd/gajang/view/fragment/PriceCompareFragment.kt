@@ -51,24 +51,7 @@ class PriceCompareFragment : BaseFragment<FragmentPriceCompareBinding>(R.layout.
                 binding.priceCompareItemName.text = binding.priceCompareMarketSpinner.selectedItem.toString()
 
                 var whatItem = binding.priceCompareMarketSpinner.selectedItem.toString()
-                val itemName: String = when(whatItem){
-                    "고등어" -> "fish_icon"
-                    "오징어" -> "squid"
-                    "명태" -> "pollock"
-                    "조기" -> "jogi"
-                    "달걀" -> "eggs"
-                    "닭고기" -> "chicken"
-                    "돼지고기" -> "pig"
-                    "쇠고기" -> "cow"
-                    "애호박" -> "greenpumkin"
-                    "오이" -> "cucumber"
-                    "상추" -> "lettuce"
-                    "양파" -> "onion"
-                    "무" -> "radish"
-                    "배추" -> "cabbage"
-                    "배" -> "pear"
-                    else -> "apple" //사과에 대응함
-                }
+                val itemName = whatIsItemSelected(whatItem)
                 val imageResourceId: Int = resources.getIdentifier(itemName, "drawable",requireContext().packageName)
                 priceCompareMarketImage.setImageResource(imageResourceId)
 
@@ -95,5 +78,31 @@ class PriceCompareFragment : BaseFragment<FragmentPriceCompareBinding>(R.layout.
                 TODO("Not yet implemented")
             }
         }
+        fun whatIsSelectedOnSpinner(){
+
+        }
+    }
+
+
+    private fun whatIsItemSelected(itemValue:String):String{
+        val itemValueName: String = when(itemValue){
+            "고등어" -> "fish_icon"
+            "오징어" -> "squid"
+            "명태" -> "pollock"
+            "조기" -> "jogi"
+            "달걀" -> "eggs"
+            "닭고기" -> "chicken"
+            "돼지고기" -> "pig"
+            "쇠고기" -> "cow"
+            "애호박" -> "greenpumkin"
+            "오이" -> "cucumber"
+            "상추" -> "lettuce"
+            "양파" -> "onion"
+            "무" -> "radish"
+            "배추" -> "cabbage"
+            "배" -> "pear"
+            else -> "apple" //사과에 대응함
+        }
+        return itemValueName
     }
 }

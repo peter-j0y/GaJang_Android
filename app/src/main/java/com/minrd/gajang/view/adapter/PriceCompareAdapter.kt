@@ -20,7 +20,6 @@ class PriceCompareAdapter(var dataList: MutableList<ResponseNecessariesData> = A
 
     inner class MyViewHolder(private val binding: PriceCompareItemViewBinding): RecyclerView.ViewHolder(binding.root) {
         fun bind(myData: ResponseNecessariesData){
-
             binding.priceCompareItemData = myData
             Log.d(TAG, "bind: $myData")
 
