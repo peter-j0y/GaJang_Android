@@ -22,41 +22,45 @@ class PriceCompareAdapter(var dataList: MutableList<ResponseNecessariesData> = A
         fun bind(myData: ResponseNecessariesData){
             binding.priceCompareItemData = myData
             //Log.d(TAG, "bind: $myData")
+            setOnMarketImage(myData.M_NAME.toString())
+        }
 
-            if(myData.M_NAME!!.contains("롯데슈퍼")){
+        private fun setOnMarketImage(marketName:String){
+            if(marketName.contains("롯데슈퍼")){
                 binding.priceCompareItemViewImage.setImageResource(R.drawable.lottesuper)
             }
-            else if(myData.M_NAME!!.contains("이마트")){
+            else if(marketName.contains("이마트")){
                 binding.priceCompareItemViewImage.setImageResource(R.drawable.emart)
             }
-            else if(myData.M_NAME!!.contains("홈플러스")){
+            else if(marketName.contains("홈플러스")){
                 binding.priceCompareItemViewImage.setImageResource(R.drawable.homeplus)
             }
-            else if(myData.M_NAME!!.contains("현대백화점")){
+            else if(marketName.contains("현대백화점")){
                 binding.priceCompareItemViewImage.setImageResource(R.drawable.hyundaidepartmentstore)
             }
-            else if(myData.M_NAME!!.contains("신세계백화점")){
+            else if(marketName.contains("신세계백화점")){
                 binding.priceCompareItemViewImage.setImageResource(R.drawable.sinsagae)
             }
-            else if(myData.M_NAME!!.contains("롯데백화점")){
+            else if(marketName.contains("롯데백화점")){
                 binding.priceCompareItemViewImage.setImageResource(R.drawable.lottedepart)
             }
-            else if(myData.M_NAME!!.contains("뉴코아")){
+            else if(marketName.contains("뉴코아")){
                 binding.priceCompareItemViewImage.setImageResource(R.drawable.newcore)
             }
-            else if(myData.M_NAME!!.contains("하나로")){
+            else if(marketName.contains("하나로")){
                 binding.priceCompareItemViewImage.setImageResource(R.drawable.hanaro)
             }
-            else if(myData.M_NAME!!.contains("NC")){
+            else if(marketName.contains("NC")){
                 binding.priceCompareItemViewImage.setImageResource(R.drawable.ncdepart)
             }
-            else if(myData.M_NAME!!.contains("롯데마트")){
+            else if(marketName.contains("롯데마트")){
                 binding.priceCompareItemViewImage.setImageResource(R.drawable.lottemart)
             }
             else{
                 binding.priceCompareItemViewImage.setImageResource(R.drawable.market)
             }
         }
+
     }
 
     //만들어진 뷰홀더 없을때 뷰홀더(레이아웃) 생성하는 함수
