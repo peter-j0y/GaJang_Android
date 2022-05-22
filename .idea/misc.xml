@@ -3,7 +3,6 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/Seungmin/AppData/Local/Android/Sdk/platforms/android-31/data/res/layout/simple_spinner_dropdown_item.xml" value="0.15364583333333334" />
         <entry key="..\:/Users/Seungmin/GitProjects/GaJang_Android/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1" />
         <entry key="..\:/Users/Seungmin/GitProjects/GaJang_Android/app/src/main/res/drawable/ic_baseline_location_on_24.xml" value="0.1" />
         <entry key="..\:/Users/Seungmin/GitProjects/GaJang_Android/app/src/main/res/drawable/ic_baseline_perm_identity_24.xml" value="0.1" />
@@ -48,7 +47,8 @@
         <entry key="..\:/Users/leems/AndroidStudioProjects/GaJang_Android/app/src/main/res/layout/activity_main.xml" value="0.515625" />
         <entry key="..\:/Users/leems/AndroidStudioProjects/GaJang_Android/app/src/main/res/layout/fragment_login.xml" value="0.515625" />
         <entry key="..\:/Users/leems/AndroidStudioProjects/GaJang_Android/app/src/main/res/layout/fragment_my_info.xml" value="0.25" />
-        <entry key="..\:/Users/leems/AndroidStudioProjects/GaJang_Android/app/src/main/res/layout/fragment_nearby_store.xml" value="0.25" />
+        <entry key="..\:/Users/leems/AndroidStudioProjects/GaJang_Android/app/src/main/res/layout/fragment_nearby_store.xml" value="0.23703703703703705" />
+        <entry key="..\:/Users/leems/AndroidStudioProjects/GaJang_Android/app/src/main/res/layout/fragment_nearyby_store_detail_show.xml" value="0.3567708333333333" />
         <entry key="..\:/Users/leems/AndroidStudioProjects/GaJang_Android/app/src/main/res/layout/fragment_price_compare.xml" value="0.33" />
         <entry key="..\:/Users/leems/AndroidStudioProjects/GaJang_Android/app/src/main/res/layout/fragment_privacy.xml" value="0.31145833333333334" />
         <entry key="..\:/Users/leems/AndroidStudioProjects/GaJang_Android/app/src/main/res/layout/fragment_select_living.xml" value="0.31145833333333334" />
@@ -56,8 +56,10 @@
         <entry key="..\:/Users/leems/AndroidStudioProjects/GaJang_Android/app/src/main/res/layout/fragment_splash.xml" value="0.515625" />
         <entry key="..\:/Users/leems/AndroidStudioProjects/GaJang_Android/app/src/main/res/layout/nearby_item_view.xml" value="0.31145833333333334" />
         <entry key="..\:/Users/leems/AndroidStudioProjects/GaJang_Android/app/src/main/res/layout/nearby_itemview.xml" value="0.35597826086956524" />
+        <entry key="..\:/Users/leems/AndroidStudioProjects/GaJang_Android/app/src/main/res/layout/nearby_market_item_view.xml" value="0.17325227963525835" />
         <entry key="..\:/Users/leems/AndroidStudioProjects/GaJang_Android/app/src/main/res/layout/nearby_market_view.xml" value="0.33" />
         <entry key="..\:/Users/leems/AndroidStudioProjects/GaJang_Android/app/src/main/res/layout/nearby_marketview.xml" value="0.31302083333333336" />
+        <entry key="..\:/Users/leems/AndroidStudioProjects/GaJang_Android/app/src/main/res/layout/nearby_store_detail_item_view.xml" value="0.3567708333333333" />
         <entry key="..\:/Users/leems/AndroidStudioProjects/GaJang_Android/app/src/main/res/layout/price_compare_item_view.xml" value="0.33" />
         <entry key="..\:/Users/leems/AndroidStudioProjects/GaJang_Android/app/src/main/res/layout/price_compare_itemview.xml" value="0.35597826086956524" />
         <entry key="..\:/Users/leems/AndroidStudioProjects/GaJang_Android/app/src/main/res/menu/bottom_nav_menu.xml" value="0.5197916666666667" />
@@ -76,10 +78,6 @@
         <entry key="app/src/main/res/drawable/icon_google.xml" value="0.281" />
         <entry key="app/src/main/res/drawable/login_logo.xml" value="0.4245" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.4279891304347826" />
-<<<<<<< Updated upstream
-=======
-        <entry key="app/src/main/res/layout/fragment_change_living.xml" value="0.1" />
->>>>>>> Stashed changes
         <entry key="app/src/main/res/layout/fragment_login.xml" value="0.4279891304347826" />
         <entry key="app/src/main/res/layout/fragment_my_info.xml" value="0.4336372847011145" />
         <entry key="app/src/main/res/layout/fragment_nearby_store.xml" value="0.4338905775075988" />
