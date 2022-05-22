@@ -21,7 +21,7 @@ class PriceCompareAdapter(var dataList: MutableList<ResponseNecessariesData> = A
     inner class MyViewHolder(private val binding: PriceCompareItemViewBinding): RecyclerView.ViewHolder(binding.root) {
         fun bind(myData: ResponseNecessariesData){
             binding.priceCompareItemData = myData
-            Log.d(TAG, "bind: $myData")
+            //Log.d(TAG, "bind: $myData")
 
             if(myData.M_NAME!!.contains("롯데슈퍼")){
                 binding.priceCompareItemViewImage.setImageResource(R.drawable.lottesuper)

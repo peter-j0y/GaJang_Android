@@ -2,7 +2,12 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android">
 
     <data>
-
+        <variable
+            name="nearByDetailItemData"
+            type="com.minrd.gajang.data.model.ResponseNecessariesData" />
+<!--        <variable-->
+<!--            name="nearByDetailImageData"-->
+<!--            type="String" />-->
     </data>
 
     <LinearLayout
@@ -36,31 +41,43 @@
                 <TextView
                     android:id="@+id/nearby_store_detail_price"
                     android:layout_height="wrap_content"
-                    android:text="가격"
+                    android:text="@{nearByDetailItemData.a_PRICE}"
                     android:gravity="center"
                     android:textStyle="bold"
                     android:textSize="17sp"
+                    android:maxLines="1"
+                    android:ems="6"
+                    android:ellipsize="end"
                     android:layout_columnWeight="1" />
 
                 <TextView
                     android:id="@+id/nearby_store_detail_market"
-                    android:text="상품이름"
+                    android:text="@{nearByDetailItemData.a_NAME}"
                     android:gravity="center"
                     android:textStyle="bold"
                     android:textSize="17sp"
+                    android:maxLines="1"
+                    android:ems="6"
+                    android:ellipsize="end"
                     android:layout_columnWeight="1" />
 
                 <TextView
                     android:id="@+id/nearby_store_detail_origin"
-                    android:text="원산지"
+                    android:text="@{nearByDetailItemData.ADD_COL}"
                     android:gravity="center"
                     android:textSize="14sp"
+                    android:maxLines="1"
+                    android:ems="6"
+                    android:ellipsize="end"
                     android:layout_columnWeight="1" />
 
                 <TextView
                     android:id="@+id/nearby_store_detail_area"
-                    android:text="지역구"
+                    android:text="@{nearByDetailItemData.m_GU_NAME}"
                     android:gravity="center"
+                    android:maxLines="1"
+                    android:ems="6"
+                    android:ellipsize="end"
                     android:textSize="14sp"
                     android:layout_columnWeight="1" />
             </GridLayout>

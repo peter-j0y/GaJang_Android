@@ -4,15 +4,17 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.navArgs
 import com.minrd.gajang.R
 import com.minrd.gajang.base.BaseFragment
+import com.minrd.gajang.data.model.ResponseNecessariesData
 import com.minrd.gajang.databinding.FragmentNearybyStoreDetailShowBinding
+import com.minrd.gajang.view.adapter.NearByDetailAdapter
 import com.minrd.gajang.viewmodel.MainViewModel
 
 class NearbyStoreDetailShowFragment : BaseFragment<FragmentNearybyStoreDetailShowBinding>(R.layout.fragment_nearyby_store_detail_show) {
 
     private lateinit var viewModel : MainViewModel
-
+    val args: NearbyStoreDetailShowFragmentArgs by navArgs()
     override fun FragmentNearybyStoreDetailShowBinding.onCreateView(){
-        val args: NearbyStoreDetailShowFragmentArgs by navArgs()
+
 
         activity?.run{
             viewModel = ViewModelProvider(this, ViewModelProvider.NewInstanceFactory())
@@ -31,6 +33,20 @@ class NearbyStoreDetailShowFragment : BaseFragment<FragmentNearybyStoreDetailSho
     }
 
     override fun FragmentNearybyStoreDetailShowBinding.onViewCreated(){
+        val sub : ArrayList<ResponseNecessariesData> = viewModel.currentNecessariesData.value!!
+        val dataList: MutableList<ResponseNecessariesData> = ArrayList()
+
+        sub.forEach{
+            val name = it.M_NAME
+            if (name != null) {
+                if(name.contains(args.marketName)){
+                    var checking = 0
+                    dataList.add(it)
+                }
+            }
+        }
+        val nearByDetailAdapter = NearByDetailAdapter(dataList);
+        binding.nearbyDetailRcv.adapter = nearByDetailAdapter;
 
     }
 
