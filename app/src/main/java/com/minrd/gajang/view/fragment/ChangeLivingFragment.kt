@@ -32,7 +32,7 @@ class ChangeLivingFragment : Fragment(){
                 .get(MainViewModel::class.java)
         }
         binding?.changeLivingText?.text = getString(R.string.change_living_comment).format(GajangApplication.prefs.getString("LivingAreaString", "null"))
-
+        binding?.changeLivingSpinner?.setSelection(GajangApplication.prefs.getString("LivingAreaIdx", "null").toInt())
         return binding?.root
     }
 
@@ -55,6 +55,7 @@ class ChangeLivingFragment : Fragment(){
         }
         binding?.changeLivingText?.text = getString(R.string.change_living_comment).format(viewModel.livingAreaString.value)
         GajangApplication.prefs.setString("LivingAreaIdx", changeLivingAreaIdx.toString())
+        GajangApplication.prefs.setString("LivingAreaString", changeLivingAreaString)
     }
 
 }

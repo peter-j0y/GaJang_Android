@@ -11,6 +11,7 @@ import com.minrd.gajang.R
 import com.minrd.gajang.base.BaseFragment
 import com.minrd.gajang.data.model.ResponseNecessariesData
 import com.minrd.gajang.databinding.FragmentPriceCompareBinding
+import com.minrd.gajang.util.GajangApplication
 import com.minrd.gajang.view.adapter.NearByAdapter
 import com.minrd.gajang.view.adapter.PriceCompareAdapter
 import com.minrd.gajang.viewmodel.MainViewModel
@@ -59,11 +60,21 @@ class PriceCompareFragment : BaseFragment<FragmentPriceCompareBinding>(R.layout.
 
                 var sub : ArrayList<ResponseNecessariesData> = viewModel.currentNecessariesData.value!!
                 var dataList: MutableList<ResponseNecessariesData> = ArrayList()
-
+                Log.d("ㄱㅓ주지",GajangApplication.prefs.getString("LivingAreaString", "null"))
                 sub.forEach {
                     val name = it.A_NAME
+                    val area = it.M_GU_NAME
                     if (name != null) {
-                        if (name.contains(priceCompareSpinner.selectedItem.toString())) {
+                        if (name.contains(priceCompareSpinner.selectedItem.toString()) and area!!.contains(GajangApplication.prefs.getString("LivingAreaString", "null"))) {
+                            dataList.add(it)
+                        }
+                    }
+                }
+                sub.forEach {
+                    val name = it.A_NAME
+                    val area = it.M_GU_NAME
+                    if (name != null) {
+                        if (name.contains(priceCompareSpinner.selectedItem.toString()) and !(area!!.contains(GajangApplication.prefs.getString("LivingAreaString", "null")))) {
                             dataList.add(it)
                         }
                     }
