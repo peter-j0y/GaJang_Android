@@ -36,6 +36,6 @@
 
 
 - 만든 사람
-> 신승민<a href="https://github.com/Seungmin-develop">
-> 김민구<a href="https://github.com/devMingu">
-> 이민석<a href="https://github.com/ThugMS">
+> <a href="https://github.com/Seungmin-develop">신승민
+> <a href="https://github.com/devMingu">김민구
+> <a href="https://github.com/ThugMS">이민석
